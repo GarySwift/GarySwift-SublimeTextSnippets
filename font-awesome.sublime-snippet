@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<i class="fa fa-${1:envelope}"></i>
+]]></content>
+	<tabTrigger>fa</tabTrigger>
+	<description>Font Awesome Icon</description>
+	<scope>text.html - source.php</scope>
+</snippet>

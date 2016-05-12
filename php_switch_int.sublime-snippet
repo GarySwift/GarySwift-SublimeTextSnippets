@@ -1,0 +1,20 @@
+<snippet>
+    <content>
+<![CDATA[
+switch (\$${1:i}) {
+    case 0:
+        echo "i equals 0";
+        break;
+    case 1:
+        echo "i equals 1";
+        break;
+    case 2:
+        echo "i equals 2";
+        break;
+}
+]]>
+    </content>
+    <tabTrigger>switch_int</tabTrigger>
+    <description>Display PHP switch statement for integers</description>
+    <scope>source.php</scope>
+</snippet>

@@ -1,0 +1,19 @@
+# Sublime Text Files #
+######################
+
+*.last-run
+*.merged-ca-bundle
+*.sublime-settings
+*.system-ca-bundle
+*.user-ca-bundle
+Preferences.sublime-settings
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
