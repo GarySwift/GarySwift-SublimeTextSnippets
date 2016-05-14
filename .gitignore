@@ -7,6 +7,8 @@
 *.system-ca-bundle
 *.user-ca-bundle
 Preferences.sublime-settings
+Package\ Control.cache
+ColorPicker
 
 # OS generated files #
 ######################

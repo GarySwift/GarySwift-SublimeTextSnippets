@@ -1,0 +1,9 @@
+[
+	{ "keys": ["command+shift+i"], "command": "reindent"}, { "keys": ["command+0"], "command": "focus_side_bar" },
+	{ "keys": ["alt+d"],
+      "command": "insert_snippet",
+      "args": {
+        "contents": "console.log(${1:}$SELECTION)${0}"
+      }
+    }
+]
