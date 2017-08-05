@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+div.small-12.medium-12.large-6.columns
+]]></content>
+	<tabTrigger>grid</tabTrigger>
+	<description>Zurb Grid (Shorthand)</description>
+	<scope>text.html - source.php</scope>
+</snippet>
