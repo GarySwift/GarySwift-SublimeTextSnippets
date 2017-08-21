@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+// Usage: is_select_set('wp_swift_field', \$options, \$value);
+if (!function_exists('is_select_set')) {
+	function is_select_set(\$name, \$options, \$value) {
+	    if (isset(\$options[\$name]) && \$options[\$name] == \$value) {
+	        echo 'selected';
+	    }
+	}
+}
+]]></content>
+	<tabTrigger>select</tabTrigger>
+	<description>WordPress is_select_set</description>
+	<scope>source.php</scope>
+</snippet>

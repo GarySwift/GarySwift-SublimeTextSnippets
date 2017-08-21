@@ -1,0 +1,16 @@
+<snippet>
+<content>
+<![CDATA[<?${TM_PHP_OPEN_TAG:php} 
+/*
+
+$SELECTION
+
+*/ 
+?>]]>
+</content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wrap</tabTrigger>
+	<description>Wrap in PHP Comment</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html - source.php</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+# Custom changes to wp-config.php
+# Change the Default WordPress Uploads Folder
+define('UPLOADS', 'assets');
+]]></content>
+	<tabTrigger>assets</tabTrigger>
+	<description>WordPress assets folder</description>
+	<scope>source.php</scope>
+</snippet>
