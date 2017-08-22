@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[			
+if (\$post->post_type === 'post') {
+	foundationpress_entry_meta();
+}
+]]></content>
+	<tabTrigger>entry_meta</tabTrigger>
+	<description>FoundationPress Meta Check</description>
+	<scope>source.php</scope>
+</snippet>

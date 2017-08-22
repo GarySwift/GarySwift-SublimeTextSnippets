@@ -5,5 +5,9 @@
       "args": {
         "contents": "console.log(${1:}$SELECTION)${0}"
       }
-    }
+    },
+	{ "keys": ["command+shift+w"],
+	  "command": "insert_snippet", 
+	  "args": { "name": "Packages/User/PHP/php-comment-multi-line.sublime-snippet" } 
+	},   
 ]

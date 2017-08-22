@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+echo "<hr>";
+]]></content>
+    <tabTrigger>hr</tabTrigger>
+    <description>echo hr</description>
+    <scope>source.php</scope>
+</snippet>

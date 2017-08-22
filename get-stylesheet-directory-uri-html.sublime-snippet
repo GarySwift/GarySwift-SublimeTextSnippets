@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[
-<?php echo get_stylesheet_directory_uri(); ?>/assets/images/
-]]></content>
-    <tabTrigger>uri</tabTrigger>
-    <description>Wordpress stylesheet directory</description>
-    <scope>text.html</scope>
-</snippet>
