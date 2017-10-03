@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+try {
+    \$dbh = new PDO('mysql:host=localhost;dbname=test', \$user, \$pass);
+    foreach(\$dbh->query('SELECT * from FOO') as \$row) {
+        print_r(\$row);
+    }
+    \$dbh = null;
+} catch (PDOException \$e) {
+    print "Error!: " . \$e->getMessage() . "<br/>";
+    die();
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>pdo</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
