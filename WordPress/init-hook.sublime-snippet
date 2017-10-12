@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Fire on the initialization of WordPress.
+ */
+function ${1:fire_on_wp_initialization}() {
+    // Do stuff. Say we will echo "Fired on the WordPress initialization".
+    echo 'Fired on the WordPress initialization';
+}
+add_action( 'init', '${1:fire_on_wp_initialization}', 10, 3 );
+]]></content>
+	<tabTrigger>init</tabTrigger>
+    <description>WordPress init hook</description>
+    <scope>source.php</scope>
+</snippet>

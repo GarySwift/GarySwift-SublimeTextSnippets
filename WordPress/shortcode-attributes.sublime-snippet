@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+\$a = shortcode_atts( array(
+    'foo' => 'something',
+    'bar' => 'something else',
+), \$atts );
+
+\$foo = \$a['foo'];
+\$bar = \$a['bar'];
+
+return "foo = {\$a['foo']}";
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>atts</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<description>WordPress shortcode attributes</description>
+	<scope>source.php</scope>
+</snippet>
