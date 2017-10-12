@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+// [bartag foo="foo-value"]
+function bartag_func( \$atts ) {
+    \$a = shortcode_atts( array(
+        'foo' => 'something',
+        'bar' => 'something else',
+    ), \$atts );
+
+	\$foo = \$a['foo'];
+	\$bar = \$a['bar'];
+
+    return "foo = {\$a['foo']}";
+}
+add_shortcode( 'bartag', 'bartag_func' );
+]]></content>
+	<tabTrigger>shortcode</tabTrigger>
+	<description>WordPress shortcode</description>
+	<scope>source.php</scope>
+</snippet>

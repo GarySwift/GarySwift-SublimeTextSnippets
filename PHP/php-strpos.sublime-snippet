@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+\$a = 'How are you?';
+if (strpos(\$a, 'are') !== false) {
+    echo 'true';
+}
+
+]]></content>
+	<tabTrigger>strpos</tabTrigger>
+	<description>strpos() - Find the position of the first occurrence of a substring in a string</description>
+	<scope>source.php</scope>
+</snippet>
