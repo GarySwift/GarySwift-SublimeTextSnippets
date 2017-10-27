@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+var lastname = "Hi";
+if(typeof lastname !== "undefined") {
+  // Variable is defined
+}
+]]></content>
+	<tabTrigger>typeof</tabTrigger>
+	<tabTrigger>undefined</tabTrigger>
+	<scope>source.js, source.jsx, source.ts</scope>
+	<description>Check if var is defined</description>
+</snippet>
