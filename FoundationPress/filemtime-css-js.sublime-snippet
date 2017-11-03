@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+\$css_version = filemtime( get_stylesheet_directory().'/dist/assets/css/app.css' );
+\$js_version = filemtime( get_stylesheet_directory().'/dist/assets/js/app.js' );
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>filemtime</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<description>FoundationPress filemtime css &amp; js</description>
+	<scope>source.php</scope>
+</snippet>
