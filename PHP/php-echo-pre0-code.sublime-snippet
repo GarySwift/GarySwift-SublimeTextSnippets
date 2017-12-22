@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-echo "<pre>"; var_dump(\$${1:array}); echo "</pre>";
+echo "<pre>${1:var}: \$${1:var}</pre>";
 ]]></content>
     <tabTrigger>pre</tabTrigger>
-    <description>HTML Preformatted Text</description>
+    <description>echo pre</description>
     <scope>source.php</scope>
 </snippet>

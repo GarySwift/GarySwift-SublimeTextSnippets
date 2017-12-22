@@ -3,6 +3,6 @@
 echo "<pre>${1:array}: "; var_dump(\$${1:array}); echo "</pre>";
 ]]></content>
     <tabTrigger>pre2</tabTrigger>
-    <description>HTML Preformatted Text 2</description>
+    <description>echo pre + name + var_dump()</description>
     <scope>source.php</scope>
 </snippet>

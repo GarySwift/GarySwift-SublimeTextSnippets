@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+// Default arguments
+\$args = array('orderby' => 'name', 'order' => 'ASC', 'fields' => 'all'); 
+\$terms = wp_get_post_terms( \$post->ID, \$taxonomy='${1:category}', \$args );
+
+if (!is_wp_error(\$terms) && count(\$terms)) {
+	echo '<ul>';
+	foreach (\$terms as \$key => \$term) {
+		echo '<li>'.\$term->term_id.': '.\$term->name.'</li>';
+	}
+	echo '</ul>';
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>terms</tabTrigger>
+	<description>WordPress: Retrieve the terms for a post</description>
+	<scope>source.php</scope>
+</snippet>

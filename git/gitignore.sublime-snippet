@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+# Ignore Mac DS_Store files
+.DS_Store
+*.DS_Store
+assets/.sass-cache/
+]]></content>
+	<tabTrigger>gitignore</tabTrigger>
+	<description>.gitignore mac osx files</description>
+</snippet>

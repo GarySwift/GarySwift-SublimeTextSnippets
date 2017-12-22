@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+\$terms = get_terms( array(
+    'taxonomy' => '${1:category}',
+    'hide_empty' => true,
+    // top-level
+    'parent' => 0,    
+) );
+
+if (!is_wp_error(\$terms) && count(\$terms)) {
+	echo '<ul>';
+	foreach (\$terms as \$key => \$term) {
+		echo '<li>'.\$term->term_id.': '.\$term->name.'</li>';
+	}
+	echo '</ul>';
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>terms_all</tabTrigger>
+	<description>WordPress: Retrieve all terms of a taxonomy</description>
+	<scope>source.php</scope>
+</snippet>

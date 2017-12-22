@@ -9,5 +9,9 @@
 	{ "keys": ["command+shift+w"],
 	  "command": "insert_snippet", 
 	  "args": { "name": "Packages/User/PHP/php-comment-multi-line.sublime-snippet" } 
-	},   
+	},  
+	{ "keys": ["ctrl+alt+command+/"],
+	  "command": "insert_snippet", 
+	  "args": { "name": "Packages/User/PHP/comment-multiline.sublime-snippet" } 
+	},  	 
 ]

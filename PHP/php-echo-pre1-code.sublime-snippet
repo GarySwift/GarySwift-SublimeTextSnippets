@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+echo "<pre>"; var_dump(\$${1:array}); echo "</pre>";
+]]></content>
+    <tabTrigger>pre1</tabTrigger>
+    <description>echo pre + var_dump()</description>
+    <scope>source.php</scope>
+</snippet>
