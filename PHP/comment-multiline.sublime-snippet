@@ -12,12 +12,14 @@
  * The section after the description contains the tags; which provide
  * structured meta-data concerning the given element.
  *
- * @author  Gary Swift <gary@brightlight.ie>
+ * @author  		Gary Swift <gary@brightlight.ie>
  *
- * @since 1.0
+ * @since 			1.0
+ * 
+ * @link 			http://docs.phpdoc.org/references/phpdoc/basic-syntax.html
  *
- * @param int    \$example  This is an example function/method parameter description.
- * @param string \$example2 This is a second example. 
+ * @param int    	\$example  This is an example function/method parameter description.
+ * @param string 	\$example2 This is a second example.
  */
 
 ]]></content>

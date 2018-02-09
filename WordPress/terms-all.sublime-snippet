@@ -1,5 +1,21 @@
 <snippet>
 	<content><![CDATA[
+// Optional
+global \$wp;
+\$current_term_id = get_queried_object_id();
+\$current_url = get_term_link(\$current_term_id);
+
+\$title = single_term_title("", false);
+\$description = term_description();
+
+\$tax = \$wp_query->get_queried_object();
+if (\$tax->parent === 0) {
+	\$tax_id = \$tax->term_id;
+}
+else {
+	\$tax_id = \$tax->parent;
+}
+
 \$terms = get_terms( array(
     'taxonomy' => '${1:category}',
     'hide_empty' => true,
@@ -7,13 +23,22 @@
     'parent' => 0,    
 ) );
 
-if (!is_wp_error(\$terms) && count(\$terms)) {
-	echo '<ul>';
-	foreach (\$terms as \$key => \$term) {
-		echo '<li>'.\$term->term_id.': '.\$term->name.'</li>';
-	}
-	echo '</ul>';
-}
+if (!is_wp_error(\$terms) && count(\$terms)): ?>
+	<div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-3 text-center">
+		<?php foreach (\$terms as \$key => \$term): 
+			\$featured_image = '';
+			if ( get_field('featured_image', 'service_category_'.\$term->term_id) ) {
+				\$featured_image = ' featured-image';
+			}
+			\$term_link = get_term_link( \$term );
+			?>
+			<div class="cell" id="term-<?php echo \$term->term_id; ?>">
+				<h4><a href="<?php echo esc_url( \$term_link ); ?>"><?php echo \$term->name;?></a></h4>
+			</div>
+		<?php endforeach ?>
+	</div>						 		
+<?php 
+endif;
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>terms_all</tabTrigger>
