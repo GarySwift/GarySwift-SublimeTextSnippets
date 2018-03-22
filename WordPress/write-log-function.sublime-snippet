@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+write_log(${1:this});
+]]></content>
+	<tabTrigger>wl</tabTrigger>
+	<description>write_log()</description>
+	<scope>source.php</scope>
+</snippet>
