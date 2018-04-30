@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Detect if localhost
+ * 
+ * @return true if using localhost
+ */
+function is_localhost() {
+    \$whitelist = array( '127.0.0.1', '::1' );
+    if( in_array( \$_SERVER['REMOTE_ADDR'], \$whitelist) ) {
+    	return true;
+    }
+    return false;
+}
+// Usage:
+// $id = is_localhost() ? 1 : 2;
+// echo is_localhost() ? 1 : 2; 
+// some_function( is_localhost() ? 1 : 2 ); 
+]]></content>
+	<tabTrigger>localhost</tabTrigger>
+	<description>function localhost()</description>
+	<scope>source.php</scope>
+</snippet>
