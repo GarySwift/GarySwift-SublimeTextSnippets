@@ -1,7 +1,5 @@
 <snippet>
 	<content><![CDATA[
-<?php 
-
 \$posts = get_posts(array(
 	'posts_per_page'	=> -1,
 	'post_type'			=> '${1:post}',
@@ -11,7 +9,7 @@
             'taxonomy' => 'custom_taxonomy',
             'terms' => \$term->term_id
         )
-    )
+    ),
     //optional filter by meta_key
 	'meta_key'		=> 'location',
 	'meta_value'	=> 'Melbourne'    
@@ -41,5 +39,5 @@ if( \$posts ): ?>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>get_posts</tabTrigger>
 	<description>get_posts() loop</description>
-	<scope>text.html - source.php</scope>
+	<scope>source.php</scope>
 </snippet>
