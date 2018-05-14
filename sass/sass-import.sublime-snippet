@@ -2,7 +2,6 @@
 	<content><![CDATA[
 @import "${1:file}";
 ]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>+</tabTrigger>
 	<description>Sass Import</description>
 	<scope>source.scss, source.sass</scope>
