@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+/*
+Keybindings
+To snake_case: “ctrl+alt+c”, “ctrl+alt+s”
+To SCREAMING_SNAKE_CASE: “ctrl+alt+c”, “ctrl+alt+shift+s”
+To camelCase: “ctrl+alt+c”, “ctrl+alt+c”
+To PascalCase: “ctrl+alt+c”, “ctrl+alt+p”
+To dot.case: “ctrl+alt+c”, “ctrl+alt+d”
+To dash-case: “ctrl+alt+c”, “ctrl+alt+h”
+To separate words: “ctrl+alt+c”, “ctrl+alt+w”
+To separate with forward slashes: “ctrl+alt+c”, “ctrl+alt+/”
+To separate with backslashes: “ctrl+alt+c”, “ctrl+alt+b”
+To toggle between snake_case, camelCase and PascalCase: “ctrl+shift+-”
+*/
+]]></content>
+	<tabTrigger>case</tabTrigger>
+	<description>Case Conversion - keyboard shortcuts</description>
+	<scope>source.php</scope>
+</snippet>
