@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Formatting Date and Time
+ * 
+ * @link https://codex.wordpress.org/Formatting_Date_and_Time
+ */
+echo 'This entry was posted on ' . the_time('l, F jS, Y') . ' and is filed under ' . the_category(', ') . '.';
+]]></content>
+	<tabTrigger>time</tabTrigger>
+	<description>time &amp; metadata</description>
+	<scope>source.php</scope>
+</snippet>

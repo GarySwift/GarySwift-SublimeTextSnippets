@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+\$(".checkbox").change(function() {
+    if(this.checked) {
+        //Do stuff
+    }
+});
+//or
+var validCheckbox = \$(".checkbox").is(":checked");
+]]></content>
+	<tabTrigger>checkbox</tabTrigger>
+	<scope>source.js, source.jsx, source.ts</scope>
+	<description>Checkbox changed event</description>
+</snippet>
