@@ -1,0 +1,36 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"ApacheConf",
+		"AutoFileName",
+		"BracketHighlighter",
+		"Case Conversion",
+		"Console Wrap",
+		"CSS3",
+		"DA UI",
+		"DocBlockr",
+		"Emmet",
+		"Emmet Css Snippets",
+		"Gutter Color",
+		"HTML5",
+		"Maybs Quit",
+		"Monokai Extended",
+		"Package Control",
+		"PHPSnippets",
+		"Random Everything",
+		"Sass",
+		"SCSS Snippets",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jshint",
+		"SublimeLinter-php",
+		"Toggle the View Read-Only",
+		"WordPress Completions"
+	]
+}

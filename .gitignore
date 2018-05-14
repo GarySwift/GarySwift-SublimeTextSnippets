@@ -6,7 +6,9 @@
 *.sublime-settings
 *.system-ca-bundle
 *.user-ca-bundle
-Preferences.sublime-settings
+# Preferences.sublime-settings
+!Package Control.sublime-settings
+!Preferences.sublime-settings
 Package\ Control.cache
 ColorPicker
 
