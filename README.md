@@ -1,7 +1,9 @@
-## SublimeTextSnippets
-Simply a repo to keep my sublime text snippets and packages in sync across machines.
+# SublimeTextSnippets & Packages
+This a repo to keep my sublime text snippets and packages in sync across machines.
 
 ## Installed Packages
+
+These are all of the packaages listed in _Package Control.sublime-settings_. These packages will be automatically installed by Sublime Text.
 
 * A File Icon
 * ApacheConf
@@ -84,6 +86,11 @@ Type random and you get the following choices:
 * Random:E-mail - picks a random E-mail address
 * Random:Url - generates a URL using random words from /usr/share/dict/words
 
+Case Conversion is a plugin for Sublime Text. It converts the current word/token between pascal, camel, snake, screaming snake, dot, dash (hyphen), forward slash /, backslash \ cases, and separated words.
+
+### Case Conversion
+Case Conversion is a plugin for Sublime Text. It converts the current word/token between pascal, camel, snake, screaming snake, dot, dash (hyphen), forward slash /, backslash \ cases, and separated words.
+
 #### Keybindings
 * To snake_case: “ctrl+alt+c”, “ctrl+alt+s”
 * To SCREAMING_SNAKE_CASE: “ctrl+alt+c”, “ctrl+alt+shift+s”
@@ -95,7 +102,6 @@ Type random and you get the following choices:
 * To separate with forward slashes: “ctrl+alt+c”, “ctrl+alt+/”
 * To separate with backslashes: “ctrl+alt+c”, “ctrl+alt+b”
 * To toggle between snake_case, camelCase and PascalCase: “ctrl+shift+-”
-
 
 ### Sublime Terminal
 Open Terminal at File Press `cmd+shift+t`
