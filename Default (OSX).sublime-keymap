@@ -1,11 +1,11 @@
 [
 	{ "keys": ["command+shift+i"], "command": "reindent"}, { "keys": ["command+0"], "command": "focus_side_bar" },
-	{ "keys": ["alt+d"],
-      "command": "insert_snippet",
-      "args": {
-        "contents": "console.log(${1:}$SELECTION)${0}"
-      }
-    },
+	// { "keys": ["alt+d"],
+ //      "command": "insert_snippet",
+ //      "args": {
+ //        "contents": "console.log(${1:}$SELECTION)${0}"
+ //      }
+ //    },
 	{ "keys": ["command+shift+w"],
 	  "command": "insert_snippet", 
 	  "args": { "name": "Packages/User/PHP/php-comment-multi-line.sublime-snippet" } 

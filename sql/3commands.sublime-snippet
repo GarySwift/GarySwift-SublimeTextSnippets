@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+# 1) Replace 'http://localhost:8888/site.loc' with 'http://site.com'
+# 2) Check if wp_ prefix needs to changed
+# 3) Avoid trailing slashes in url. eg. http://site.com/    
+
+UPDATE wp_options SET option_value = replace(option_value, 
+'//localhost:8888/site.loc', '//${1:site.com}') WHERE 
+option_name = 'home' OR option_name = 'siteurl'; 
+
+UPDATE wp_posts SET guid = replace(guid, 
+'//localhost:8888/site.loc','//${1:site.com}'); 
+
+UPDATE wp_posts SET post_content = replace(post_content, 
+'//localhost:8888/site.loc', '//${1:site.com}'); 
+]]></content>
+	<tabTrigger>3commands</tabTrigger>
+	<scope>source.sql</scope>
+</snippet>

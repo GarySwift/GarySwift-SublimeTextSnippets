@@ -1,7 +1,48 @@
 ## SublimeTextSnippets
-Simply a repo to keep my sublime text snippets in sync across machines.
+Simply a repo to keep my sublime text snippets and packages in sync across machines.
 
-## Packages
+## Installed Packages
+
+* A File Icon
+* ApacheConf
+* AutoFileName
+* BracketHighlighter
+* Case Conversion
+* ColorPicker
+* Console Wrap
+* CSS3
+* DA UI
+* DocBlockr
+* Emmet
+* Emmet Css Snippets
+* GitGutter
+* Gutter Color
+* Hayaku - tools for writing CSS faster
+* HighlightWords
+* HTML5
+* JSONLint
+* MarkdownEditing
+* Maybs Quit
+* Monokai Extended
+* Package Control
+* PHPSnippets
+* Pretty JSON
+* Random Everything
+* Sass
+* SCSS Snippets
+* SideBarEnhancements
+* SublimeGit
+* SublimeLinter
+* SublimeLinter-csslint
+* SublimeLinter-jshint
+* SublimeLinter-php
+* Terminal
+* Toggle the View Read-Only
+* WordPress Completions
+
+## Packages not Under Version Control
+
+[Open-Include](https://github.com/titoBouzout/Open-Include) bt titoBouzout. This will open file paths found under the cursor with `Alt + D`. This was removed from [Package Control](https://packagecontrol.io/packages/Open-Include).
 
 ### Case Conversion
 Case Conversion is a plugin for Sublime Text. It converts the current word/token between pascal, camel, snake, screaming snake, dot, dash (hyphen), forward slash /, backslash \ cases, and separated words.
