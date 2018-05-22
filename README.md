@@ -42,9 +42,12 @@ These are all of the packaages listed in _Package Control.sublime-settings_. The
 * Toggle the View Read-Only
 * WordPress Completions
 
-## Packages not Under Version Control
+## Packages Not Under Version Control
 
-[Open-Include](https://github.com/titoBouzout/Open-Include) bt titoBouzout. This will open file paths found under the cursor with `Alt + D`. This was removed from [Package Control](https://packagecontrol.io/packages/Open-Include).
+[Open-Include](https://github.com/titoBouzout/Open-Include) by titoBouzout. This will open file paths found under the cursor with `Alt + D`. This was removed from [Package Control](https://packagecontrol.io/packages/Open-Include).
+
+## Package Notes
+This a quick guide to the installed packages.
 
 ### Case Conversion
 Case Conversion is a plugin for Sublime Text. It converts the current word/token between pascal, camel, snake, screaming snake, dot, dash (hyphen), forward slash /, backslash \ cases, and separated words.
