@@ -5,5 +5,6 @@
 		"Markdown",
 		"Vintage"
 	],
-	"theme": "Adaptive.sublime-theme"
+	"theme": "Adaptive.sublime-theme",
+	"auto_complete_selector": "source, comment, text.plain, meta.tag, punctuation.definition.tag.begin, css, scss",
 }

@@ -49,9 +49,6 @@ These are all of the packaages listed in _Package Control.sublime-settings_. The
 ## Package Notes
 This a quick guide to the installed packages.
 
-### Case Conversion
-Case Conversion is a plugin for Sublime Text. It converts the current word/token between pascal, camel, snake, screaming snake, dot, dash (hyphen), forward slash /, backslash \ cases, and separated words.
-
 ### Console Wrap
 This plugin helps you easily create (comment, remove, show all) log statements (console.log, print etc.)
 
