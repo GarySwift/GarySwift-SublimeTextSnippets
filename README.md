@@ -1,10 +1,53 @@
-## SublimeTextSnippets
-Simply a repo to keep my sublime text snippets in sync across machines.
+# SublimeTextSnippets & Packages
+This a repo to keep my sublime text snippets and packages in sync across machines.
 
-## Packages
+## Installed Packages
 
-### Case Conversion
-Case Conversion is a plugin for Sublime Text. It converts the current word/token between pascal, camel, snake, screaming snake, dot, dash (hyphen), forward slash /, backslash \ cases, and separated words.
+These are all of the packaages listed in _Package Control.sublime-settings_. These packages will be automatically installed by Sublime Text.
+
+* A File Icon
+* ApacheConf
+* AutoFileName
+* BracketHighlighter
+* Case Conversion
+* ColorPicker
+* Console Wrap
+* CSS3
+* DA UI
+* DocBlockr
+* Emmet
+* Emmet Css Snippets
+* GitGutter
+* Gutter Color
+* Hayaku - tools for writing CSS faster
+* HighlightWords
+* HTML5
+* JSONLint
+* MarkdownEditing
+* Maybs Quit
+* Monokai Extended
+* Package Control
+* PHPSnippets
+* Pretty JSON
+* Random Everything
+* Sass
+* SCSS Snippets
+* SideBarEnhancements
+* SublimeGit
+* SublimeLinter
+* SublimeLinter-csslint
+* SublimeLinter-jshint
+* SublimeLinter-php
+* Terminal
+* Toggle the View Read-Only
+* WordPress Completions
+
+## Packages Not Under Version Control
+
+[Open-Include](https://github.com/titoBouzout/Open-Include) by titoBouzout. This will open file paths found under the cursor with `Alt + D`. This was removed from [Package Control](https://packagecontrol.io/packages/Open-Include).
+
+## Package Notes
+This a quick guide to the installed packages.
 
 ### Console Wrap
 This plugin helps you easily create (comment, remove, show all) log statements (console.log, print etc.)
@@ -43,6 +86,11 @@ Type random and you get the following choices:
 * Random:E-mail - picks a random E-mail address
 * Random:Url - generates a URL using random words from /usr/share/dict/words
 
+Case Conversion is a plugin for Sublime Text. It converts the current word/token between pascal, camel, snake, screaming snake, dot, dash (hyphen), forward slash /, backslash \ cases, and separated words.
+
+### Case Conversion
+Case Conversion is a plugin for Sublime Text. It converts the current word/token between pascal, camel, snake, screaming snake, dot, dash (hyphen), forward slash /, backslash \ cases, and separated words.
+
 #### Keybindings
 * To snake_case: “ctrl+alt+c”, “ctrl+alt+s”
 * To SCREAMING_SNAKE_CASE: “ctrl+alt+c”, “ctrl+alt+shift+s”
@@ -54,7 +102,6 @@ Type random and you get the following choices:
 * To separate with forward slashes: “ctrl+alt+c”, “ctrl+alt+/”
 * To separate with backslashes: “ctrl+alt+c”, “ctrl+alt+b”
 * To toggle between snake_case, camelCase and PascalCase: “ctrl+shift+-”
-
 
 ### Sublime Terminal
 Open Terminal at File Press `cmd+shift+t`

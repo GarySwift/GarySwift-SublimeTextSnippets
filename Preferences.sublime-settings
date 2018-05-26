@@ -1,4 +1,5 @@
 {
+	"auto_complete_selector": "source, comment, text.plain, meta.tag, punctuation.definition.tag.begin, css, scss",
 	"font_size": 14,
 	"ignored_packages":
 	[
