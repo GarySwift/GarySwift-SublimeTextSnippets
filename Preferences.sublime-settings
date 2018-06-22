@@ -13,5 +13,10 @@
 		"Markdown",
 		"Vintage"
 	],
+	"ignored_words":
+	[
+		"Dropbox",
+		"Mamp"
+	],
 	"theme": "Adaptive.sublime-theme"
 }
