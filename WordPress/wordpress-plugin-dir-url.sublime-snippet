@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+plugin_dir_url( __FILE__ ) . 
+# \$url = plugin_dir_url( \$file );
+# https://codex.wordpress.org/Function_Reference/plugin_dir_url
+]]></content>
+	<tabTrigger>plugin_dir_url</tabTrigger>
+	<description>WordPress rget plugin file url</description>
+	<scope>source.php</scope>
+</snippet>
