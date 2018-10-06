@@ -1,4 +1,11 @@
 {
+	"added_words":
+	[
+		"Plugin",
+		"plugin",
+		"php",
+		"shortcode"
+	],
 	"auto_complete_selector": "source, comment, text.plain, meta.tag, punctuation.definition.tag.begin, css, scss",
 	"font_size": 12,
 	"ignored_packages":

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+require_once plugin_dir_path( __FILE__ ) . 
+]]></content>
+	<tabTrigger>plugin_dir_path__file__</tabTrigger>
+	<description>WordPress require_once plugin file</description>
+	<scope>source.php</scope>
+</snippet>

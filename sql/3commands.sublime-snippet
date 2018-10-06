@@ -4,15 +4,24 @@
 # 2) Check if wp_ prefix needs to changed
 # 3) Avoid trailing slashes in url. eg. http://site.com/    
 
-UPDATE wp_options SET option_value = replace(option_value, 
-'//localhost:8888/site.loc', '//${1:site.com}') WHERE 
-option_name = 'home' OR option_name = 'siteurl'; 
+# Tools:
+# https://rudrastyh.com/tools/sql-queries-generator
 
-UPDATE wp_posts SET guid = replace(guid, 
-'//localhost:8888/site.loc','//${1:site.com}'); 
+UPDATE wp_options SET option_value = REPLACE(option_value, 
+	'//localhost:8888/site.loc', '//${1:site.com}') 
+	WHERE option_name = 'home' OR option_name = 'siteurl';
+UPDATE wp_posts SET post_content = REPLACE (post_content, 
+	'//localhost:8888/site.loc', '//${1:site.com}');
+UPDATE wp_postmeta SET meta_value = REPLACE (meta_value, 
+	'//localhost:8888/site.loc','//${1:site.com}');
+UPDATE wp_comments SET comment_content = REPLACE (comment_content, 
+	'//localhost:8888/site.loc', '//${1:site.com}');
+UPDATE wp_comments SET comment_author_url = REPLACE (comment_author_url, 
+	'//localhost:8888/site.loc','//${1:site.com}');
+UPDATE wp_posts SET guid = REPLACE (guid, 
+	'//localhost:8888/site.loc', '//${1:site.com}') 
+	WHERE post_type = 'attachment';
 
-UPDATE wp_posts SET post_content = replace(post_content, 
-'//localhost:8888/site.loc', '//${1:site.com}'); 
 ]]></content>
 	<tabTrigger>3commands</tabTrigger>
 	<scope>source.sql</scope>

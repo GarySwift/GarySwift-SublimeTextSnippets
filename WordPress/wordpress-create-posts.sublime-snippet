@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+\$post_type = "page";
+\$posts = array( "Home", "Contact", "Gallery", "Blog" );
+
+foreach (\$posts as \$post) {
+    \$post_check = get_page_by_title(\$post);
+    if ( !\$post_check ) {
+        \$new_post = array(
+            'post_type' => \$post_type,
+            'post_title' => \$post,
+            'post_status' => 'publish',
+            'post_author' => get_current_user_id(),
+        );
+        \$new_post_id = wp_insert_post(\$new_post);
+        ?>
+        <div>\$<?php echo \$post_type ?> created: <?php echo \$post ?> - <?php echo \$new_post_id ?></div><?php echo \$post_type ?>
+        <?php
+    }
+    else {
+        ?>
+        <div>\$<?php echo \$post_type ?> already exists: <?php echo \$post ?> - <?php echo \$post_check->ID ?></div>
+        <?php
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>create_posts</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+	<description>WordPress create posts programmatically</description>
+</snippet>
