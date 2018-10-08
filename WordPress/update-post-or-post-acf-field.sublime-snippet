@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+\$field = 'field_**************';
+if (\$post_content) {
+  \$my_post = array(
+      'ID'           => \$post_id,
+      'post_content' => \$post_content,
+  );
+  wp_update_post( \$my_post );// Update the post into the database   
+  update_field(\$field, '', \$post_id);// Update the ACF field   
+}
+]]></content>
+	<tabTrigger>update</tabTrigger>
+	<description>Update a post or ACF field</description>
+	<scope>source.php</scope>
+</snippet>

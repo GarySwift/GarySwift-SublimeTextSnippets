@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
+]]></content>
+    <tabTrigger>edit</tabTrigger>
+    <description>Wordpress post edit link (HTML)</description>
+    <scope>text.html</scope>
+</snippet>

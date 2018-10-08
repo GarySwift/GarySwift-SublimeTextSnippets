@@ -12,7 +12,7 @@
 	</div>
 <?${TM_PHP_OPEN_TAG:php} endif; ?>]]>
 	</content>
-	<tabTrigger>block-grid-xy</tabTrigger>
+	<tabTrigger>blockgrid</tabTrigger>
 	<description>Zurn Foundation: Block Grid XY</description>
 	<scope>text.html - source.php</scope>
 </snippet>

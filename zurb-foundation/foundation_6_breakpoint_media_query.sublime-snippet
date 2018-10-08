@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+@include breakpoint(large) {$0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>breakpoint</tabTrigger>
+	<description>@include breakpoint(large) {}</description>
+	<scope>source.scss, source.sass</scope>
+</snippet>
