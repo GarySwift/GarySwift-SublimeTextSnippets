@@ -1,0 +1,78 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Create new date for now
+ * @link http://php.net/manual/en/function.date.php
+ */ 
+\$now = date("Y/m/d");// Y/m/d string
+echo "Today is " . \$now .'<br>';
+
+/**
+ * Date format options
+ * @link http://php.net/manual/en/function.date.php
+ */                 
+\$now_format = date("d-m-Y", strtotime(\$now));// d-m-Y string
+echo "Today reformatted is " . \$now_format .'<br>';
+
+/**
+ * Convert dd/mm/yyyy into yyyy-mm-dd
+ * @link https://stackoverflow.com/questions/10306999/php-convert-date-format-dd-mm-yyyy-yyyy-mm-dd
+ */                 
+\$other_format = '24/06/2015';// dd/mm/yyyy string
+\$other_format_dashes = str_replace('/', '-', \$other_format);//PHP doesn't work well with dd/mm/yyyy
+\$other_format_date = date("Y-m-d H:i:s", strtotime(\$other_format_dashes) );
+echo "dd/mm/yyyy (\$other_format) reformatted to yyyy-mm-dd is " . \$other_format_date .'<br>';   
+
+/**
+ * New date object 
+ * @link http://php.net/manual/en/datetime.format.php
+ */
+\$now_object = new DateTime( \$now );// DateTime object
+# or
+\$date = new DateTime('2017/01/01');// DateTime object
+\$date_format =  \$date->format('d-m-Y');// d-m-Y string
+echo "A date in the past is " . \$date_format .'<br>';
+
+/**
+ * Get time difference
+ * @link http://php.net/manual/en/function.date-diff.php
+ */
+\$date_a = \$date;
+\$date_b = new DateTime( date("Y-m-d H:i:s", strtotime(\$now)) );  
+\$interval = date_diff( \$date_a, \$date_b );
+\$date_diff_days = \$interval->format('%R%a days');
+\$date_diff_years = \$interval->format('%y years');
+\$date_diff_months = \$interval->format('%m months'); 
+\$date_diff_years_months = \$interval->format('%y years + %m months'); 
+
+/**
+ * Add time to a date
+ * @link 
+ */ 
+\$two_years_from_date = date('Y-m-d H:i:s', strtotime('+2 years', strtotime(\$date_format)));
+echo "Two years from a date in the past is " . \$two_years_from_date .'<br>';
+
+/**
+ * Compare two dates
+ * @link 
+ */  
+\$today_time = date("Y-m-d H:i:s");// Y-m-d H:i:s string
+\$expire_time = \$two_years_from_date;// Y-m-d H:i:s string
+echo "\\\$today_time is \$today_time".'<br>';
+echo "\\\$expire_time is \$expire_time".'<br>';
+if (\$expire_time < \$today_time) {
+    echo "\\\$expire_time is less than \$today_time".'<br>';
+}   
+else {
+    echo "\\\$expire_time is <b>not</b> less than \$today_time".'<br>';
+}   
+
+/**
+ * ToDo: Correctly determine if date string is a valid date in that format
+ * @link https://stackoverflow.com/questions/19271381/correctly-determine-if-date-string-is-a-valid-date-in-that-format
+ */ 
+]]></content>
+	<tabTrigger>date_help</tabTrigger>
+	<description>PHP date help</description>
+	<scope>source.php</scope>
+</snippet>

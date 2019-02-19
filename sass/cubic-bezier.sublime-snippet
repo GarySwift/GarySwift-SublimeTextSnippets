@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+img {
+	transform: scale(.9);
+	transition: transform .2s cubic-bezier(.39, .58, .57, 1);
+	&:hover {
+		transform: scale(1);
+		cursor: pointer;
+	}
+}
+]]></content>
+	<tabTrigger>cubic</tabTrigger>
+	<description>Scale image with cubic-bezier transform</description>
+	<scope>source.scss, source.sass</scope>
+</snippet>

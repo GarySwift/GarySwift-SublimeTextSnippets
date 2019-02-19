@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+body {
+	background-color: #D8D8D8 !important;
+}
+]]></content>
+	<tabTrigger>body</tabTrigger>
+	<description>body background-color</description>
+	<scope>source.scss, source.sass</scope>
+</snippet>
