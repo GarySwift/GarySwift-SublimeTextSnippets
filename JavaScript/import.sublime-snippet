@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+import exportedFunction from './lib/export.js';
+\$(document).ready(function() {
+  exportedFunction();
+});
+]]></content>
+	<tabTrigger>import</tabTrigger>
+	<description>import exportedFunction from ...</description>
+	<scope>source.js</scope>
+</snippet>

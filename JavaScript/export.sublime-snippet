@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+console.log(${1});
+export default function() {
+	// code here
+}
+// Usage (app.js)
+// import exportedFunction from './lib/export';
+// \$(document).ready(function() {
+//   exportedFunction();
+// });
+]]></content>
+	<tabTrigger>export</tabTrigger>
+	<description>export default function()</description>
+	<scope>source.js</scope>
+</snippet>
