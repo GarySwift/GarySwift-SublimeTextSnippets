@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+var scrollOffset = 100;
+var scrollSpeed = 2000;
+\$("#button").click(function() {
+    \$([document.documentElement, document.body]).animate({
+        scrollTop: \$("#elementtoScrollToID").offset().top - scrollOffset
+    }, scrollSpeed);
+});
+]]></content>
+	<tabTrigger>scroll</tabTrigger>
+	<description>jQuery scroll example</description>
+	<scope>source.js</scope>
+</snippet>

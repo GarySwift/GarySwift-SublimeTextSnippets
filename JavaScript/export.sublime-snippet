@@ -1,13 +1,12 @@
 <snippet>
 	<content><![CDATA[
-console.log(${1});
 export default function() {
 	// code here
 }
 // Usage (app.js)
-// import exportedFunction from './lib/export';
+// import ${1:exportedFunction} from './lib/export';
 // \$(document).ready(function() {
-//   exportedFunction();
+//   ${1:exportedFunction}();
 // });
 ]]></content>
 	<tabTrigger>export</tabTrigger>
