@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+.table-cell {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	height: 100px;
+}
+]]></content>
+	<tabTrigger>table-cell</tabTrigger>
+	<description>table-cell css</description>
+	<scope>source.scss, source.sass</scope>
+</snippet>
