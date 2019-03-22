@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+export default function() {
+    if(typeof ${3:TestFeature}Ajax !== "undefined") {
+        console.log("${3:TestFeature}Ajax is defined -> Attempting server contact.");
+        \$.post(${3:TestFeature}Ajax.ajaxurl, ${3:TestFeature}Ajax, function(response) {
+            var serverResponse = JSON.parse(response);
+            console.log("Response from server:");
+            console.log(serverResponse);             
+        });
+    }
+}
+// Usage (app.js)
+// import ${3:TestFeature}Ajax from './lib/export';
+// \$(document).ready(function() {
+//   ${3:TestFeature}Ajax();
+// });
+]]></content>
+	<tabTrigger>ajax</tabTrigger>
+	<description>export wordpress ajax</description>
+	<scope>source.js</scope>
+</snippet>
