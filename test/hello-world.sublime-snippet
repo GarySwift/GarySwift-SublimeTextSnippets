@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+# TestFeature
+# test_feature
+# test-feature
+// ${1:Test Feature}()
+// ${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}
+// ${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}
+// ${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}
+]]></content>
+    <tabTrigger>hello</tabTrigger>
+    <description>Hello World Snippet</description>
+    <scope>source.php</scope>
+</snippet>

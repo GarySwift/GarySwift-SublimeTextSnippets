@@ -1,0 +1,88 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * WordPress ${1:TestFeature} Ajax Feature
+ */
+
+# wp_ajax action hooks
+add_action( 'wp_ajax_wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}', 'wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_callback' );
+add_action( 'wp_ajax_nopriv_wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}', 'wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_callback' );
+
+# enqueue_script
+add_action( 'wp_enqueue_scripts', 'wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_localize_script', 20 );
+
+
+/**
+ * The ajax callback function
+ */
+function wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_callback() {
+    check_ajax_referer( "${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}-nonce", 'security' );
+    \$response = array(
+    	"Server response" => "${1:TestFeature}Ajax server success",
+    );
+    echo json_encode(\$response);
+    die();
+}
+
+/**
+ * Create the ajax nonce and url
+ */
+ function wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_localize_script() {
+    \$js_version = 1.0;
+    if ( function_exists( 'foundationpress_scripts' ) ) {
+        \$js_file = "/dist/assets/js/app.js";
+        \$file = get_stylesheet_directory_uri() . \$js_file;
+        \$js_file_path = get_template_directory() . \$js_file;
+    }
+    else {
+        \$js_file = "./script.js";
+        \$file = plugin_dir_url( __FILE__ ) . \$js_file;
+        \$js_file_path = plugin_dir_path( __FILE__ ) . \$js_file;
+    }
+    \$js_version = filemtime( \$js_file_path );
+	  
+	\$${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_ajax = array(
+        // URL to wp-admin/admin-ajax.php to process the request
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        // generate a nonce with a unique ID so that you can check it later when an AJAX request is sent
+        'security' => wp_create_nonce( "${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}-nonce" ),
+        // callback function
+        'action' => 'wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}',
+        // debugging info
+        'updated' => date ("H:i:s - F d Y", \$js_version),
+        'post_id' => get_the_id(),
+        
+    );
+    if ( function_exists( 'foundationpress_scripts' ) ) {
+        wp_localize_script( 'foundation', '${1:TestFeature}Ajax', \$${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_ajax);
+    }
+    else {
+        wp_enqueue_script( "${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}-ajax", \$file, array(), \$js_version, true );
+        wp_localize_script( "${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}-ajax", "${1:TestFeature}Ajax", \$${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_ajax);
+    } 
+}
+
+/*
+@todo - add this JavaScript to an external file
+
+$0export default function() {
+    if(typeof ${1:TestFeature}Ajax !== "undefined") {
+        console.log("${1:TestFeature}Ajax is defined -> Attempting server contact.");
+        \$.post(${1:TestFeature}Ajax.ajaxurl, ${1:TestFeature}Ajax, function(response) {
+            var serverResponse = JSON.parse(response);
+            console.log("Response from server:");
+            console.log(serverResponse);             
+        });
+    }
+}
+*/
+// Usage (app.js)
+// import ${1:TestFeature}Ajax from './lib/export';
+// \$(document).ready(function() {
+//   ${1:TestFeature}Ajax();
+// });
+]]></content>
+    <tabTrigger>wp_ajax</tabTrigger>
+    <description>Wordpress Ajax</description>
+    <scope>source.php</scope>
+</snippet>
