@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+]]></content>
+	<tabTrigger>top</tabTrigger>
+	<description>top right bottom left</description>
+	<scope>source.scss, source.sass</scope>
+</snippet>
