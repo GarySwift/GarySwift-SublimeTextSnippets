@@ -1,12 +1,65 @@
 <snippet>
-	<content><![CDATA[
-# TestFeature
-# test_feature
-# test-feature
-// ${1:Test Feature}()
-// ${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}
-// ${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}
-// ${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}
+    <content><![CDATA[
+/**
+ * ${1/([a-z])([A-Z])/$1 $2/g} Description
+ * 
+ * FILE NAME:                 $TM_FILENAME
+ * TAB SIZE:                  $TM_TAB_SIZE
+ * SOFT TABS:                 $TM_SOFT_TABS
+ *
+ * \${variable/regex/format_string/options}
+ * \${1///g}
+ *
+ * ${1:HelloWorldConvertCase}    | PascalCase (Original)
+ * ${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g} | snake_case
+ * ${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g} | kebab-case
+ * ${1/([a-z])([A-Z])/$1 $2/g} | Capitalized Case
+ * ${1/^([A-Z])/\l$1/g}    | lowerCamelCase
+ * ${1/^(.*)/\U$1/g}    | UPPERCASE
+ * ${1/^(.*)/\L$1/g}    | lowercase
+ * ${1/(?-is)([A-Z])|[a-z]/(?1\l:\u)$0/g}    | tOGGLE cASE 
+ * ${1/^([A-Z])|(?:([A-Z]))/(?1\U$1:)(?2_\U$2:)/g} | SCREAMING_SNAKE_CASE
+ * ${1/^([A-Z])|(?:([A-Z]))/(?1\U$1:)(?2\U$2:)/g}    | KEBAB-CASE
+ * ${1/^([A-Z])|(?:([A-Z]))/(?1\u$1:)(?2-\u$2:)/g} | Train-Case
+ * ${1/(?-is)([a-zA-Z])[^a-zA-Z\r\n]*([a-zA-Z])?|[^a-zA-Z\r\n]+/\u\1\l\2/g}    | StUdLyCaPs
+ *
+ * @link https://notepad-plus-plus.org/community/topic/130/convert-case-to/4
+ * @link https://www.boost.org/doc/libs/1_69_0/libs/regex/doc/html/boost_regex/format/perl_format.html 
+ * @link http://docs.sublimetext.info/en/sublime-text-2/reference/snippets.html
+ * @link 
+ * @link https://stackoverflow.com/questions/53898644/sublime-text-snippet-convert-camelcase-to-snake-case
+ * @link https://regexr.com/
+ */
+class ${1:HelloWorldConvertCase} extends Extends${1:HelloWorldConvertCase} {
+    const \$${1:HelloWorldConvertCase} = "${1/^(.*)/\U$1/g}";
+    private \$${1/^(.*)/\L$1/g} = "_${1/(?-is)([A-Z])|[a-z]/(?1\l:\u)$0/g}_";
+    private \$${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g} = "${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}";
+
+    /**
+     * summary
+     */
+    public function __construct()
+    {
+        
+    }
+
+    /**
+     * @return type
+     */
+    public function get${1:HelloWorldConvertCase}()
+    {
+        return \$this->\$${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g};
+    } 
+
+    /**
+     * @param type \$${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}
+     */
+    public function set${1:HelloWorldConvertCase}(\$${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g})
+    {
+        \$this->\$${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g} = \$${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g};
+        return \$this;
+    }    
+}
 ]]></content>
     <tabTrigger>hello</tabTrigger>
     <description>Hello World Snippet</description>
