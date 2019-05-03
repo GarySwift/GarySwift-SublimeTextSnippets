@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+\$post = get_post(\$post_id);
+if ( \$post instanceof WP_Post ) {
+    echo '<pre>This is an instance of WP_Post.</pre>';
+} elseif ( is_object( \$post ) ) {
+   echo '<pre>This is an object</pre>';
+}
+]]></content>
+	<tabTrigger>if_post</tabTrigger>
+	<description>if instanceof WP_Post</description>
+	<scope>source.php</scope>
+</snippet>

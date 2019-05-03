@@ -10,9 +10,20 @@
             'terms' => \$term->term_id
         )
     ),
-    //optional filter by meta_key
+    // optional filter by meta_key
 	'meta_key'		=> 'location',
-	'meta_value'	=> 'Melbourne'    
+	'meta_value'	=> 'Melbourne',  
+	// or
+    // 'meta_query'    => array(
+    //     array(
+    //         'key'       => 'location',
+    //         'value'     => null,
+    //         'compare'   => '!=',
+    //     ),
+    // ) 
+    // optional sort by field
+    'orderby' => 'title',
+    'order' => 'ASC',// Sort alphabetically   
 ));
 
 if( \$posts ): ?>

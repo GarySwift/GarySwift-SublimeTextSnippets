@@ -1,0 +1,62 @@
+<snippet>
+	<content><![CDATA[
+export default function(type) {
+	var $slider, $slideSelector, $activeSlideLink, $link, type, slideSelectorId, slickSettings, slideno;
+	$slider = $('div.'+type);
+	slideSelectorId = '#'+type+'-selector-';
+	$slideSelector = $('a.'+type+'-selector');
+	slickSettings = {
+	  infinite: true,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  dots: false,
+	  arrows: false,
+	  autoplaySpeed: 8000,
+	  autoplay: true,
+	  speed: 500,
+	  fade: true,
+	  cssEase: 'linear',
+	  adaptiveHeight: true
+	};
+
+	if( $slider.length ) {
+		// Make first button active
+		$(slideSelectorId+'0').addClass('active');
+		// Init slider
+		$slider.slick(slickSettings);
+		// Event handlers for buttons
+		$slideSelector.click(function(e) {
+			e.preventDefault();
+			$link = $(this);
+			slickCallback($link);
+		});
+		// Apply event handler action on autoplay
+		$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+	        $link = $(slideSelectorId + nextSlide);
+	        slickCallback($link);
+	    });
+	}
+
+	var slickCallback = function($link) {
+		slideno = 0;
+		if ( !$link.hasClass('active') ) {
+			slideno = $link.data('slide');
+			$slider.slick('slickGoTo', slideno);
+			// Unset current link
+			$activeSlideLink = $('a.'+type+'-selector.active');
+			$activeSlideLink.removeClass('active');
+			// Set this link
+			$link.addClass('active');
+		}
+	};
+}
+// Usage (app.js)
+// import ${1:export}Function from './lib/${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}';
+// \$(document).ready(function('js-${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}') {
+//   ${1:export}Function();
+// });
+]]></content>
+	<tabTrigger>export</tabTrigger>
+	<description>export default function()</description>
+	<scope>source.js</scope>
+</snippet>

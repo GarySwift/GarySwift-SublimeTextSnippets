@@ -4,7 +4,7 @@ export default function() {
 	// ${1:export} code here
 }
 // Usage (app.js)
-// import ${1:export}Function from './lib/${1:export}';
+// import ${1:export}Function from './lib/${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}';
 // \$(document).ready(function() {
 //   ${1:export}Function();
 // });

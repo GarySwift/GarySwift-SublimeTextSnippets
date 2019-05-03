@@ -1,0 +1,52 @@
+<snippet>
+	<content><![CDATA[
+@mixin transition($property...) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -ms-transition: $property; // IE10 is actually unprefixed
+    -o-transition: $property;
+    transition: $property;    
+}
+@mixin transform($property...) {
+	-webkit-transform: $property;
+    -moz-transform: $property;
+    -ms-transform: $property;
+    -o-transform: $property;
+    transform: $property;     
+}
+@mixin translate-y($value) {
+    -webkit-transform: translateY($value);
+    -moz-transform: translateY($value);
+    -ms-transform: translateY($value);
+    -o-transform: translateY($value);
+    transform: translateY($value);
+}
+@mixin translate-x($value) {
+    -webkit-transform: translateX($value);
+    -moz-transform: translateX($value);
+    -ms-transform: translateX($value);
+    -o-transform: translateX($value);
+    transform: translateX($value);
+}
+.element-container {
+	position: relative;
+	overflow: hidden;
+}
+.element {
+	position: relative;
+	opacity: 0;
+	visibility: hidden;
+	transition-delay: 0.3s;
+	@include transform(translateX(200px));
+	@include transition(opacity 0.3s, visibility 0.3s, transform 0.3s);		
+}
+.overlay:hover {
+	opacity: 1;
+	visibility: visible;
+	@include transform(translateX(0));		
+}
+]]></content>
+	<tabTrigger>transitions</tabTrigger>
+	<description>CSS transitions with Sass mixins</description>
+	<scope>source.scss, source.sass</scope>
+</snippet>

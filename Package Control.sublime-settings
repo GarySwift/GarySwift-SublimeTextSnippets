@@ -41,6 +41,7 @@
 		"SublimeLinter-php",
 		"Terminal",
 		"Toggle the View Read-Only",
-		"WordPress Completions"
+		"WordPress Completions",
+		"Xdebug Client"
 	]
 }

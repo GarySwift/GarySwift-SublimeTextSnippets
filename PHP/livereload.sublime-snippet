@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\$livereload = get_template_directory().'/template-parts/_livereload.php';// This file is excluded in .gitignore.
+if (file_exists(\$livereload)) include \$livereload;
+]]></content>
+	<tabTrigger>live</tabTrigger>
+	<description>include livereload file/script</description>
+	<scope>source.php</scope>
+</snippet>

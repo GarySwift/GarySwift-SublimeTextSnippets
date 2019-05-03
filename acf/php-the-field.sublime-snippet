@@ -1,8 +1,8 @@
 <snippet>
 	<content>
-<![CDATA[\$${1:field_name} = get_field('${1:field_name}');
-if( \$${1:field_name} ) {
-	echo \$${1:field_name};
+<![CDATA[
+if( \$${1:field_name} = get_field('${1:field_name}') ) {
+	echo '<pre>${1:field_name}: '; var_export(\$${1:field_name}); echo '</pre>';
 }]]>
 	</content>
 	<tabTrigger>field</tabTrigger>

@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+var \$window = \$(window);
+var mobileBreakpoint = 1024;
+\$window.resize(function() {
+    console.log(getIsMobile());
+});  
+function getIsMobile() {
+    return \$window.width() < mobileBreakpoint;
+}
+]]></content>
+	<tabTrigger>mobile</tabTrigger>
+	<description>jQuery check if mobile</description>
+	<scope>source.js</scope>
+</snippet>

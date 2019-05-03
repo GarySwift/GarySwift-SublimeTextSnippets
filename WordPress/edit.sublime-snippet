@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+if (current_user_can( 'administrator' ))
+	echo '<a href="' .get_admin_url() . 'post.php?post='.${1:\$post->ID}.'&action=edit" target="_blank">${2:Edit}</a>';		
+]]></content>
+	<tabTrigger>edit</tabTrigger>
+	<description>Edit any WordPress post</description>
+	<scope>source.php</scope>
+</snippet>
