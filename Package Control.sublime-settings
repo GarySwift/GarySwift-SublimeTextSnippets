@@ -22,6 +22,7 @@
 		"Hayaku - tools for writing CSS faster",
 		"HighlightWords",
 		"HTML5",
+		"jQuery",
 		"JSONLint",
 		"MarkdownEditing",
 		"MarkdownPreview",
@@ -41,6 +42,7 @@
 		"SublimeLinter-php",
 		"Terminal",
 		"Toggle the View Read-Only",
+		"TypeScript Syntax",
 		"WordPress Completions",
 		"Xdebug Client"
 	]

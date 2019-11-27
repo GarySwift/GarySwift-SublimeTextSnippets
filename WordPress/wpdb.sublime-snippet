@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Get all posts by '$post_type' limit to $limit
+ */
+global \$wpdb;
+\$admin_url = get_admin_url();
+\$post_type = 'post';
+\$limit = 500;
+\$querystr = "
+SELECT wp_posts.ID, wp_posts.post_title
+FROM wp_posts 
+WHERE 1=1 
+AND wp_posts.post_type = '\$post_type'
+AND ((wp_posts.post_status = 'publish'))
+GROUP BY wp_posts.ID
+ORDER BY wp_posts.menu_order, wp_posts.post_date DESC
+LIMIT 0, \$limit";
+
+\$posts_wpdb =  \$wpdb->get_results( \$querystr );
+if( count( \$posts_wpdb ) ):
+	echo "<ul>";			
+	foreach( \$posts_wpdb as \$post ):
+		echo '<li><a href="'.\$admin_url.'post.php?post='.\$post->ID.'&action=edit" target="_blank">'.\$post->post_title.'</a></li>'; 
+	endforeach;
+	echo "</ul>";
+endif;
+]]></content>
+	<tabTrigger>wpdb</tabTrigger>
+	<description>global $wpdb helpers</description>
+	<scope>source.php</scope>
+</snippet>

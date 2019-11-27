@@ -17,8 +17,10 @@ add_action( 'wp_enqueue_scripts', 'wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$
 function wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_callback() {
     check_ajax_referer( "${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}-nonce", 'security' );
     \$response = array(
-    	"Server response" => "${1:TestFeature}Ajax server success",
+    	"server_response" => "${1:TestFeature}Ajax server success",
     );
+    if (isset(\$_POST["post_id"])) 
+        \$response["post_id"] = '\$post_id in \$_POST object is ' . \$_POST["post_id"];
     echo json_encode(\$response);
     die();
 }
@@ -28,7 +30,8 @@ function wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_callback(
  */
  function wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_localize_script() {
     \$js_version = 1.0;
-    if ( function_exists( 'foundationpress_scripts' ) ) {
+    \$foundationpress = function_exists( 'foundationpress_scripts' );
+    if ( \$foundationpress ) {
         \$js_file = "/dist/assets/js/app.js";
         \$file = get_stylesheet_directory_uri() . \$js_file;
         \$js_file_path = get_template_directory() . \$js_file;
@@ -50,9 +53,10 @@ function wp_${2:swift}_${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_callback(
         // debugging info
         'updated' => date ("H:i:s - F d Y", \$js_version),
         'post_id' => get_the_id(),
+        'debug' => true,
         
     );
-    if ( function_exists( 'foundationpress_scripts' ) ) {
+    if ( \$foundationpress ) {
         wp_localize_script( 'foundation', '${1:TestFeature}Ajax', \$${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_ajax);
     }
     else {
@@ -66,17 +70,19 @@ $0@todo - add this JavaScript to an external file
 
 $0export default function() {
     if(typeof ${1:TestFeature}Ajax !== "undefined") {
-        console.log("${1:TestFeature}Ajax is defined -> Attempting server contact.");
+        if (TestFeatureAjax.debug) console.log("${1:TestFeature}Ajax is defined -> Attempting server contact.");
         \$.post(${1:TestFeature}Ajax.ajaxurl, ${1:TestFeature}Ajax, function(response) {
             var serverResponse = JSON.parse(response);
-            console.log("Response from server:");
-            console.log(serverResponse);             
+            if (${1:TestFeature}Ajax.debug) {
+                console.log("Response from server:");
+                console.log(serverResponse);
+            }           
         });
     }
 }
 */
 // Usage (app.js)
-// import ${1/^([A-Z])/\l$1/g}Ajax from './lib/export';
+// import ${1/^([A-Z])/\l$1/g}Ajax from './lib/${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}-ajax';
 // \$(document).ready(function() {
 //   ${1/^([A-Z])/\l$1/g}Ajax();
 // });

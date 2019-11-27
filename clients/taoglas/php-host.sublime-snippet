@@ -1,0 +1,16 @@
+<snippet>
+	<content>
+<![CDATA[if (WP_TAOGLAS_HOST === "localhost") {
+    
+} 
+elseif (WP_TAOGLAS_HOST === "www.taoglas.com") {
+    
+}
+elseif (WP_TAOGLAS_HOST === "new.taoglas.com") {
+    
+}]]>
+	</content>
+	<tabTrigger>WP_TAOGLAS_HOST</tabTrigger>
+	<description>Taoglas Host</description>
+	<scope>source.php</scope>
+</snippet>
