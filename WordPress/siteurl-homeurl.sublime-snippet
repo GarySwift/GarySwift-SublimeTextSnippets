@@ -1,0 +1,23 @@
+<snippet>
+   <content><![CDATA[
+# Changing The Site URL
+#
+# https://wordpress.org/support/article/changing-the-site-url/
+#
+# 1) in wp-config.php
+#
+define( 'WP_HOME', 'http://example.com' );
+define( 'WP_SITEURL', 'http://example.com' );
+#
+# 2) (or) in functions.php
+#
+# Important! Do not leave this code in the functions.php file.
+# Remove them after the site is up and running again.
+#
+update_option( 'siteurl', 'http://example.com' );
+update_option( 'home', 'http://example.com' );
+]]></content>
+   <tabTrigger>url</tabTrigger>
+   <description>WordPress define WP_HOME + WP_SITEURL in wp-config.php with DB update options</description>
+   <scope>source.php</scope>
+</snippet>
