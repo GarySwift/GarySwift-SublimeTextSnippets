@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+@media screen and #{breakpoint(${1:small only }${2:medium down }${3:large }${4:xlarge up})} {
+	$0
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>media_options</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.scss, source.sass</scope>
+	<!-- Legacy version: @media #{\$large-up} { -->
+</snippet>

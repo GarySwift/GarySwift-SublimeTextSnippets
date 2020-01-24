@@ -1,0 +1,33 @@
+<snippet>
+	<content>
+<![CDATA[
+/**
+ * Hide the ACF menu
+ *
+ * When delivering a website to a client, it may be beneficial to hide the 
+ * Advanced Custom Fields menu item. This will prevent your client from 
+ * changing / deleting fields and will keep the website running smoothly.
+ *
+ * @author      Gary Swift <gary@brightlight.ie>
+ *
+ * @since       1.0
+ * 
+ * @link       https://www.advancedcustomfields.com/resources/how-to-hide-acf-menu-from-clients/
+ */
+add_filter('acf/settings/show_admin', 'my_acf_show_admin');
+function my_acf_show_admin( \$show ) {
+    
+    return current_user_can('manage_options');
+    
+}
+# Hide for everyone
+// add_filter('acf/settings/show_admin', '__return_false');
+]]>
+	</content>
+	<tabTrigger>hide_acf_menu</tabTrigger>
+	<description>Hide ACF menu</description>
+	<scope>source.php</scope>
+</snippet>
+<!-- <![CDATA[if( get_field('${1:field_name}') ) {
+	echo get_field('${1:field_name}');
+}]]> -->

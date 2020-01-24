@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+try {
+  	${1:nonExistentFunction}();
+}
+catch(error) {
+  	console.error(error);
+  	// expected output: ReferenceError: ${1:nonExistentFunction} is not defined
+}
+finally {
+  // Statements that are executed after the try statement completes. These statements execute regardless of whether an exception was thrown or caught.
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
+}
+]]></content>
+	<tabTrigger>try</tabTrigger>
+	<scope>source.js, source.jsx, source.ts</scope>
+	<description>try...catch statement</description>
+</snippet>

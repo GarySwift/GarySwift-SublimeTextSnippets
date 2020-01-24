@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Template Name: ${1:Brightlight}
+${2: * Template Post Type: page} 
+ * 
+ * @author  ${3:Gary Swift <gary@brightlight.ie>}
+ * @package ${1:Brightlight}Package
+ * @since   ${4:1.0}
+ */
+
+$0
+]]></content>
+	<tabTrigger>template</tabTrigger>
+    <description>WordPress template header</description>
+    <scope>source.php</scope>
+</snippet>

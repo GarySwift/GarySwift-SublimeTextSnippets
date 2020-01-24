@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Prevent Wordpress from generating medium_large image size
+ *
+ * Keep in mind that medium_large is generally a good size to have 
+ * in srcset, only remove it if you have understanding how 
+ * srcset works, if you have similar sizes there already.
+ *
+ * @author  		Gary Swift <gary@brightlight.ie>
+ */
+add_filter('intermediate_image_sizes', function(\$sizes) {
+    return array_diff(\$sizes, ['medium_large']);
+});
+]]></content>
+	<tabTrigger>medium_large</tabTrigger>
+	<description>Prevent medium_large image size</description>
+	<scope>source.php</scope>
+</snippet>
