@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+h1, h2, h3, h4, h5, h6${1:, p, div, a, span} {
+	
+}
+]]></content>
+	<tabTrigger>h</tabTrigger>
+	<description>h1, h2, h3, h4, h5, h6</description>
+	<scope>source.scss, source.sass</scope>
+</snippet>

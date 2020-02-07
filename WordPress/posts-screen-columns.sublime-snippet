@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+function manage_columns_for_${1:post_type}(\$columns){
+    \$options = get_option( 'wp_swift_${1:post_type}_cpt_settings' );
+    //remove columns
+    unset(\$columns['date']);
+    unset(\$columns['title']);
+    \$columns['title'] = _x('Name', 'column ${1:post_type} name');
+
+    //add new columns
+    \$columns['${2/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}'] = _x('${2:Field}', 'column ${1:post_type} ${2/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}');
+
+    \$columns['date'] = _x('Date', 'column ${1:post_type} date');
+    return \$columns;
+}
+add_action('manage_${1:post_type}_posts_columns','manage_columns_for_${1:post_type}');
+function populate_${1:post_type}_columns(\$column,\$post_id){
+    global \$post;
+    if(\$column == '${2/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}'){
+        if(\$${2/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g} = get_field('${2/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}')){
+            echo \$${2/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g};
+        }         
+    }
+}
+add_action('manage_${1:post_type}_posts_custom_column','populate_${1:post_type}_columns',10,2);
+]]></content>
+    <tabTrigger>posts_screen_columns</tabTrigger>
+    <description>CPT Post Screen Columns</description>
+    <scope>source.php</scope>
+</snippet>
