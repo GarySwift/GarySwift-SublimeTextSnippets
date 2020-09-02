@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+console.log('${1}:', ${1}, ',${2}:', ${2});
+]]></content>
+	<tabTrigger>log2+2</tabTrigger>
+	<description>console.log('', var, '', var);</description>
+	<scope>source.js</scope>
+</snippet>

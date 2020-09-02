@@ -1,0 +1,47 @@
+<snippet>
+	<content><![CDATA[
+// npm install --save-dev axios
+// import axios from 'axios'
+// window.axios = axios
+//
+// Make a request for a user with a given ID
+axios.get('${3:url}')
+	.then( response => {
+		let { data } = response;
+		this.${2:someValue} = data.${2:someValue};// (or just data if json)				
+	})
+	.catch(function (error) {
+	    // handle error
+	    console.log(error);
+	});
+${1:/*
+Alternative syntax for handling server response: 
+
+2)
+axios.get(url)
+	.then( ({ data \}) => {
+		this.someValue = data.someValue	
+	\})
+	.catch(function (error) {
+	    console.log(error);
+	\});
+3)
+axios.get(url)
+	.then( response => response.data)
+	.catch(function (error) {
+	    console.log(error);
+	\})
+	.then(data => {
+		this.someValue = data.someValue	
+	\});
+4)
+axios.get(url)
+    .then(function (response) {
+		console.log(response.data.someValue);
+    \});	
+*/}	
+]]></content>
+	<tabTrigger>axios</tabTrigger>
+	<description>axios.get('url');</description>
+	<scope>source.js</scope>
+</snippet>

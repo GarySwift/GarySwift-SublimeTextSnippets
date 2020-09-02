@@ -17,11 +17,11 @@
 		"DocBlockr",
 		"Emmet",
 		"Emmet Css Snippets",
-		"GitGutter",
 		"Gutter Color",
 		"Hayaku - tools for writing CSS faster",
 		"HighlightWords",
 		"HTML5",
+		"JavaScript Completions",
 		"jQuery",
 		"JSONLint",
 		"Laravel Blade Highlighter",
@@ -36,7 +36,6 @@
 		"Sass",
 		"SCSS Snippets",
 		"SideBarEnhancements",
-		"SublimeGit",
 		"SublimeLinter",
 		"SublimeLinter-csslint",
 		"SublimeLinter-jshint",
@@ -44,7 +43,8 @@
 		"Terminal",
 		"Toggle the View Read-Only",
 		"TypeScript Syntax",
-		"WordPress Completions",
-		"Xdebug Client"
+		"Vue Syntax Highlight",
+		"Vuejs Snippets",
+		"WordPress Completions"
 	]
 }

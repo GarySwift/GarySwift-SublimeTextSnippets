@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Cookie Fix
+ *
+ * Fix for the 'You must enable cookies to use WordPress' issue.
+ * 
+ * @author Gary Swift <gary@brightlight.ie>
+ * 
+ * @link   https://help.servmask.com/knowledgebase/error-cookies-are-blocked-or-not-supported-by-your-browser-you-must-enable-cookies-to-use-wordpress/
+ */
+define( 'COOKIE_DOMAIN', \$_SERVER[ 'HTTP_HOST' ] );	
+]]></content>
+	<tabTrigger>cookies</tabTrigger>
+	<description>Fix for the 'You must enable cookies to use WordPress' issue</description>
+	<scope>source.php</scope>
+</snippet>

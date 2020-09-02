@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+
+\$admin_url = get_admin_url();
+
+\$post_type = '${1:post}';
+
+\$args = array(
+    'posts_per_page'    => -1,
+    'post_type'         => \$post_type,
+    'fields'            => 'ids',
+);
+
+\$posts = get_posts(\$args);
+
+if( \$posts ): ?>
+    
+    <?php echo '<ul>' ?>
+        
+    <?php 
+    \$i = 0;
+    foreach( \$posts as \$id ): 
+
+		\$i++;
+        \$permalink = get_the_permalink(\$id);
+        \$title = get_the_title(\$id);
+        echo '<li>'.\$id.': <a href="'.\$permalink.'">'.\$title.'</a> - <a href="' .\$admin_url. 'post.php?post='.\$id.'&action=edit" target="_blank">Edit</a></li>';
+    
+    endforeach;
+    ?>
+    
+    <?php echo '<ul>' ?>
+
+<?php endif;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>get_posts_ids</tabTrigger>
+	<description>get_posts() - (IDs only)</description>
+	<scope>source.php</scope>
+</snippet>
