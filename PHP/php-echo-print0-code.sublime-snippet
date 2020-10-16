@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+printf("${1:var}: \$${1:var}\\n");
+]]></content>
+    <tabTrigger>printf</tabTrigger>
+    <description>printf String</description>
+    <scope>source.php</scope>
+</snippet>

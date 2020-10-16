@@ -1,0 +1,33 @@
+<snippet>
+	<content><![CDATA[
+/* 
+https://developer.wordpress.org/reference/functions/get_term_by/
+get_term_by( string \$field, 
+				string|int \$value, 
+				string \$taxonomy = '', 
+				string \$output = OBJECT, 
+				string \$filter = 'raw' 
+			)
+*/
+# By id (term_id, not post_id)
+# Get term by id ('term_id') in Categories taxonomy.
+\$term = get_term_by('term_id', 12, 'category');
+
+# Get term by name 'news' in Categories taxonomy.
+\$category = get_term_by('name', 'news', 'category');
+ 
+# Get term by name 'news' in Tags taxonomy.
+\$tag = get_term_by('name', 'news', 'post_tag');
+ 
+# Get term by name 'news' in Custom taxonomy.
+\$term = get_term_by('name', 'news', 'my_custom_taxonomy');
+ 
+# Get term by name 'Default Menu' from theme's nav menus.
+# (Alternative to using wp_get_nav_menu_items)
+\$menu = get_term_by('name', 'Default Menu', 'nav_menu');
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>term</tabTrigger>
+	<description>WordPress: get term by ...</description>
+	<scope>source.php</scope>
+</snippet>

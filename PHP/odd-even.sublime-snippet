@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+for (\$i = 0; \$i < 10; \$i++) {
+    # Determine odd/even using modulo operator in a ternary conditional operator
+    \$class = \$i % 2 == 0 ? 'even':'odd';
+    echo \$i.': '.\$class."<br>";
+}
+]]></content>
+	<tabTrigger>odd_evan</tabTrigger>
+	<description>Determine odd/even</description>
+	<scope>source.php</scope>
+</snippet>

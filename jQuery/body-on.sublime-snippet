@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+\$('body').on('click', '${1:.element}', function() {
+  console.log(\$(this).attr("id"));
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>body</tabTrigger>
+	<description>$('body').on</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
