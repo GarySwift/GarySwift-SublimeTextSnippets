@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+if (current_user_can( 'administrator' ))
+	echo '<a href="'.esc_url( get_edit_term_link( \$term->term_id, \$taxonomy) ).'" target="_blank">${1:Edit}</a>';		
+]]></content>
+	<tabTrigger>edit_term</tabTrigger>
+	<description>Edit any WordPress term</description>
+	<scope>source.php</scope>
+</snippet>

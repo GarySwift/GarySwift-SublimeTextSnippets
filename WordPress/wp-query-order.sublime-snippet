@@ -1,0 +1,28 @@
+<snippet>
+<content><![CDATA[
+# sorted alphabetically
+'orderby' => 'title',
+'order'   => ${1:'DESC',//}${2:'ASC',}
+# sorted by date
+'orderby' => 'date',
+'order'   => 'ASC',
+'suppress_filters' => true,
+# sorted by meta 1
+'order'    => 'ASC',
+'orderby'  => 'order_in_archive',
+'meta_key' => 'order_in_archive',
+# sorted by meta 2
+'orderby'   => 'order_clause',
+'meta_query' => array(
+   'order_clause' => array(
+        'key' => 'order_in_archive',
+        'value' => 'some_value',
+        'type' => 'NUMERIC' // unless the field is not a number
+	)
+),
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>order</tabTrigger>
+	<description>order WP_Query</description>
+	<scope>source.php</scope>
+</snippet>

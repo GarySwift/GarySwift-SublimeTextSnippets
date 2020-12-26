@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+/**
+  * Disable WordPress Heartbeat In The Admin Panel
+  *
+  * The WordPress Heartbeat API can slow down your WordPress dashboard since it consumes resources 
+  * by notifying you when other users are editing a post, real-time plugin notifications, etc
+  *
+  * @author  		Gary Swift <gary@brightlight.ie>
+  *
+  * @since 			2020-10-27
+  * 
+  * @link 			https://onlinemediamasters.com/slow-wordpress-admin-panel/#disable-heartbeat
+  */
+add_action( 'init', 'stop_heartbeat', 1 );
+function stop_heartbeat() {
+	wp_deregister_script('heartbeat');
+}
+]]></content>
+	<tabTrigger>heartbeat</tabTrigger>
+	<description>Add action to disable heartbeat</description>
+	<scope>source.php</scope>
+</snippet>
