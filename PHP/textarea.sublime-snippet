@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+echo '<textarea rows="50" cols="200" onclick="this.focus();this.select();document.execCommand(\'copy\')" onfocus="this.focus();this.select();document.execCommand(\'copy\')">\$${1:table} = '; var_export(\$${1:table}); echo ';</textarea>';
+]]></content>
+	<tabTrigger>textarea</tabTrigger>
+	<description>textarea with js copy function</description>
+	<scope>source.php</scope>
+</snippet>

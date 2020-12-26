@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+attr('id')
+]]></content>
+	<tabTrigger>id</tabTrigger>
+	<scope>source.js, source.jsx, source.ts</scope>
+	<description>$(this).attr('id')</description>
+</snippet>

@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+/*
+margin: (top right bottom left);// 1 value - all
+margin: (top bottom) (right left);// 2 values
+margin: (top) (right left) (bottom);// 3 values
+margin: top right bottom left;// 4 values - trbl (trouble)
+margin: auto;// Horizontally center the element within its container
+margin: inherit;// Let element margin be inherited from its parent element 
+*/
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>shorthand</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<description>CSS Margin and Padding Shorthand</description>
+	<scope>source.css, source.scss, source.sass</scope>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+if (function_exists("get_featured_image")):
+    \$image = get_featured_image();
+    if ( \$image ) :
+        \$image_xlarge = \$image["sizes"]['featured-xlarge'];
+        \$image_large = \$image["sizes"]['featured-large'];
+        \$image_medium = \$image["sizes"]['featured-medium' ];
+        \$image_small = \$image["sizes"]['featured-small'];
+        ?>
+
+        <div class="featured-image">
+            <img src="<?php echo \$image_large ?>" data-interchange="[<?php echo \$image_small ?>, small], [<?php echo \$image_medium ?>, medium], [<?php echo \$image_large ?>, large], [<?php echo \$image_xlarge ?>, xlarge]" alt="<?php img_alt(\$image, get_the_title()) ?>">
+        </div>
+
+    <?php endif;   
+endif;
+]]></content>
+	<tabTrigger>featured_image_get</tabTrigger>
+	<description>Get the featured image (WP Swift)</description>
+	<scope>source.php</scope>
+</snippet>

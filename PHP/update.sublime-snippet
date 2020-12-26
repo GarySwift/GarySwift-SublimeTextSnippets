@@ -1,0 +1,29 @@
+<snippet>
+	<content><![CDATA[
+    \$update = false;
+
+    if (isset(\$_POST["update"])) : \$update = true;?>
+        <br>
+         <div class="callout secondary">
+             <h3>Updating</h3>
+             <p>The files shown below have been updated.</p>
+         </div>
+    <?php endif ?>
+
+
+    <?php if (\$update): ?>
+        <?php # Do the update stuf... ?>
+    <?php endif ?>
+
+    <form method="POST">
+        <input type="hidden" name="update" value="1">
+        <input type="submit" value="Update" class="button large secondary">
+    </form>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>update</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+	<description>A simple form to use while debugging</description>
+</snippet>

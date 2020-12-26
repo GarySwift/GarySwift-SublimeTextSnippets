@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+# After looping through a separate query, this function restores the $post global to the current post in the main query.		
+wp_reset_postdata();
+]]></content>
+	<tabTrigger>reset</tabTrigger>
+	<description>WordPress reset post data after loop</description>
+	<scope>source.php</scope>
+</snippet>

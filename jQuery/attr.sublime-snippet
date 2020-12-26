@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+// Return the value of an attribute:
+// \$(selector).attr(attribute)
+// Set the attribute and value:
+// \$(selector).attr(attribute,value)
+${1:\$("img")}.attr("width","500");
+]]></content>
+	<tabTrigger>attr</tabTrigger>
+	<scope>source.js, source.jsx, source.ts</scope>
+	<description>jQuery attr() Method</description>
+</snippet>

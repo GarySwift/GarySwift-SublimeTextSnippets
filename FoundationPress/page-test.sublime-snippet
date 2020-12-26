@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+/*
+Template Name: Test
+*/
+get_header(); ?>
+<div class="main-container">
+  <div class="main-grid">
+    <main class="main-content-full-width">
+      <?php while ( have_posts() ) : the_post(); ?>
+        <?php get_template_part( 'template-parts/content', 'page' ); ?>
+        <?php comments_template(); ?>
+      <?php endwhile; ?>
+    </main>
+  </div>
+</div>
+<?php
+get_footer();
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>page</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+	<description>FoundationPress Test Template</description>
+</snippet>

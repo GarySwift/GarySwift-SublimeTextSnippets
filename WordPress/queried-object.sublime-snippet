@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * The “currently-queried object” means the object that is the subject of the webpage:
+ * 
+ * – On a category archive, tag archive, or other taxonomy archive page, it will  * return the WP_Term object of the current category, tag, or other term.
+ * – If you have set a posts page where your basic posts are displayed,  * get_queried_object() will return the WP_Post object of that page.
+ * – On post type archive pages, it will return the WP_Post_Type object of the given  * post type.
+ * – On an author archive page, it will return the WP_User object of that author.
+ * – On any singular page (a single post, a single page, or a post in a custom post  * type), it will return the WP_Post object of that post or page.
+ * 
+ * @link https://developer.wordpress.org/reference/functions/get_queried_object/
+ */
+
+# Retrieve the currently-queried object
+\$queried_object = get_queried_object();
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>queried</tabTrigger>
+	<description>WordPress: Get currently-queried object</description>
+	<scope>source.php</scope>
+</snippet>

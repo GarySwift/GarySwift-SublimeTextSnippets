@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+jQInit.push( [ '${1:create_feature}', function( \$ ) {
+    (function(\$) {
+		${2}
+    })(jQuery);
+}]);   
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>jqinit</tabTrigger>
+	<description>jQInit.push</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

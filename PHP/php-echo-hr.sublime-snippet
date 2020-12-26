@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-echo "<hr>";
+echo "<${1:hr}>";
 ]]></content>
     <tabTrigger>hr</tabTrigger>
     <description>echo hr</description>

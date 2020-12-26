@@ -1,0 +1,38 @@
+<snippet>
+	<content>
+<![CDATA[
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>${1:Vue.js}</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>	
+</head>
+<body>
+
+	<div id="${2:app}" class="container p-3 my-3 border">
+		<h1>${1:Vue.js}: <span v-text="title"></span></h1>
+	</div>
+
+	<script>
+		var ${2:app} = new Vue({
+		  el: '#${2:app}',
+		  data: {
+		    title: '${3:Hello World}',
+		  },
+		  methods: {
+		  },  
+		});    
+	</script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+</body>
+</html>
+]]>
+	</content>
+	<tabTrigger>vue</tabTrigger>
+	<description>vue html page</description>
+	<scope>text.html - source.php</scope>
+</snippet>

@@ -56,7 +56,7 @@ export default function(type) {
 //   ${1:export}Function();
 // });
 ]]></content>
-	<tabTrigger>export</tabTrigger>
-	<description>export default function()</description>
+	<tabTrigger>slick</tabTrigger>
+	<description>Slick slider (wrapped in export function)</description>
 	<scope>source.js</scope>
 </snippet>

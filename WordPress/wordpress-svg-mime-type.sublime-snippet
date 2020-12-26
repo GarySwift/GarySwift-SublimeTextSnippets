@@ -6,6 +6,13 @@ function add_mime_types( \$mimes ){
     return \$mimes;
 }
 add_filter( 'upload_mimes', 'add_mime_types' );
+/*
+	Note: Add New Permitted File Types Using wp-config.php
+
+	Add the following code snippet above the "That’s all, stop editing! Happy blogging." line:
+
+	define('ALLOW_UNFILTERED_UPLOADS', true);
+*/
 ]]></content>
 	<tabTrigger>svg_mime_types</tabTrigger>
 	<description>WordPress SVG support</description>

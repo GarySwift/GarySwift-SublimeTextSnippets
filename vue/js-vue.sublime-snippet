@@ -1,0 +1,17 @@
+<snippet>
+	<content>
+<![CDATA[
+var \$${1:app} = new Vue({
+  el: '#${1:app}',
+  data: {
+    title: '${2:Hello World}',
+  },
+  methods: {
+  },  
+});    
+]]>
+	</content>
+	<tabTrigger>vue</tabTrigger>
+	<description>new Vue()</description>
+	<scope>source.js</scope>
+</snippet>

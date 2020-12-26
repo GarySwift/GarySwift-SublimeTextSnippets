@@ -3,6 +3,9 @@
 plugin_dir_url( __FILE__ ) . 
 # \$url = plugin_dir_url( \$file );
 # https://codex.wordpress.org/Function_Reference/plugin_dir_url
+#
+# Level Up: plugin_dir_url( dirname(__FILE__) );
+# https://wordpress.stackexchange.com/questions/70371/get-plugin-dir-url-from-one-level-deep-within-plugin
 ]]></content>
 	<tabTrigger>plugin_dir_url</tabTrigger>
 	<description>WordPress rget plugin file url</description>

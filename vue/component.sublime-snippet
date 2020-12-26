@@ -1,0 +1,18 @@
+<snippet>
+	<content>
+<![CDATA[
+Vue.component("${1:component}", {
+	template: `
+
+	`,
+	props: ["title"],
+	data: {
+
+	}
+});
+]]>
+	</content>
+	<tabTrigger>component</tabTrigger>
+	<description>Vue.component</description>
+	<scope>text.html - source.php, source.js</scope>
+</snippet>
