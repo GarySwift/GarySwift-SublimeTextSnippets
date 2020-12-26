@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * @link https://developer.wordpress.org/reference/functions/sanitize_title/
+ * string $title, string $fallback_title = '', string $context = 'save'
+ */		
+sanitize_title( \$${1:title}, '', '${2:save}' );
+]]></content>
+	<tabTrigger>slug</tabTrigger>
+	<description>Sanitizes a string into a slug</description>
+	<scope>source.php</scope>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+@mixin ${1:my-mixin}(\$${2:property}${4:...}) {
+  ${2:property}: \$${2:property};    
+}
+// Usage
+.${1:my-mixin}{
+  \$${2:property}: '${3:property}';
+  @include ${1:my-mixin}(\$${2:property});
+}
+]]></content>
+	<tabTrigger>mix</tabTrigger>
+	<description>Sass mixin template</description>
+	<scope>source.scss, source.sass</scope>
+</snippet>

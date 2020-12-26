@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-// Optional
+// @start Optional
 global \$wp;
 \$current_term_id = get_queried_object_id();
 \$current_url = get_term_link(\$current_term_id);
@@ -15,9 +15,11 @@ if (\$tax->parent === 0) {
 else {
 	\$tax_id = \$tax->parent;
 }
+// @end Optional
 
+\$taxonomy = '${1:category}';
 \$terms = get_terms( array(
-    'taxonomy' => '${1:category}',
+    'taxonomy' => \$taxonomy,
     'hide_empty' => true,
     // top-level
     'parent' => 0,    
@@ -26,14 +28,14 @@ else {
 if (!is_wp_error(\$terms) && count(\$terms)): ?>
 	<div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-3 text-center">
 		<?php foreach (\$terms as \$key => \$term): 
-			\$featured_image = '';
-			if ( get_field('featured_image', 'service_category_'.\$term->term_id) ) {
-				\$featured_image = ' featured-image';
-			}
+			\$acf_field = get_field('${2:acf_field}', \$taxonomy.'_'.\$term->term_id);
 			\$term_link = get_term_link( \$term );
 			?>
 			<div class="cell" id="term-<?php echo \$term->term_id; ?>">
 				<h4><a href="<?php echo esc_url( \$term_link ); ?>"><?php echo \$term->name;?></a></h4>
+                <?php if (\$acf_field): ?>
+                    <?php echo '<pre>\$acf_field: '; var_dump(\$acf_field); echo '</pre>'; ?>
+                <?php endif ?>				
 			</div>
 		<?php endforeach ?>
 	</div>						 		

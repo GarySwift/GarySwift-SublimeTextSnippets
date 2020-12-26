@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Update the term ACF field
+ *
+ * update_term_meta( int \$term_id, string \$meta_key, mixed \$meta_value, mixed \$prev_value = '' )
+ * 
+ * @link https://developer.wordpress.org/reference/functions/update_term_meta/
+ */
+\$field = '${1:field_name}';# Warning! not field_id, ie. field_1************a
+\$value = '${2:Some Value}';
+\$term_id = ${3:\$term->term_id};
+update_term_meta((int) \$term_id, \$field, \$value);
+]]></content>
+	<tabTrigger>update term acf</tabTrigger>
+	<description>Update a term ACF field</description>
+	<scope>source.php</scope>
+</snippet>
