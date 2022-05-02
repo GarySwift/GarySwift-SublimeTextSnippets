@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+\$AOS = new aos();
+\$AOS->open();
+\$AOS->close();
+]]></content>
+    <tabTrigger>aos</tabTrigger>
+    <description>AOS helper class</description>
+    <scope>source.php</scope>
+</snippet>

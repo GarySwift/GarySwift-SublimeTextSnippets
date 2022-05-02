@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-wp_reset_query();//optional
+wp_reset_query();
 \$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 \$post_type = 'post';
 \$posts_per_page = 10;
@@ -45,7 +45,7 @@ elseif ( is_paged() ) :
 		<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
 	</nav>
 <?php endif;
-wp_reset_query();
+wp_reset_postdata();
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

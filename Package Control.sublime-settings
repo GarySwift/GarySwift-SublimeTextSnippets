@@ -24,6 +24,7 @@
 		"JavaScript Completions",
 		"jQuery",
 		"JSONLint",
+		"JSX",
 		"Laravel Blade Highlighter",
 		"MarkdownEditing",
 		"MarkdownPreview",
@@ -40,11 +41,12 @@
 		"SublimeLinter-csslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-php",
+		"Syntax Highlighting for Sass",
 		"Terminal",
 		"Toggle the View Read-Only",
 		"TypeScript Syntax",
 		"Vue Syntax Highlight",
 		"Vuejs Snippets",
 		"WordPress Completions"
-	]
+	],
 }

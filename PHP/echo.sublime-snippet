@@ -1,0 +1,8 @@
+<snippet>
+    <content>
+<![CDATA[<?${TM_PHP_OPEN_TAG:php} echo \$${1:var} ?>]]>
+    </content>
+    <tabTrigger>echo</tabTrigger>
+    <description>PHP echo</description>
+    <scope>text.html - source.php</scope>
+</snippet>

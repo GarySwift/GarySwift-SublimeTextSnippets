@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+<?php if (\$is_preview): ?>
+    ${1}
+<?php else: ?>
+    ${2}
+<?php endif ?>
+]]></content>
+  <tabTrigger>preview</tabTrigger>
+  <description>if $is_preview</description>
+  <scope>text.html - source.php</scope>
+</snippet>

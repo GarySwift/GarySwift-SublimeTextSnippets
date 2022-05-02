@@ -7,19 +7,21 @@
 		"shortcode"
 	],
 	"auto_complete_selector": "source, comment, text.plain, meta.tag, punctuation.definition.tag.begin, css, scss",
-	"font_size": 16,
+	"font_size": 17,
 	"ignored_packages":
 	[
 		"Markdown",
 		"MarkdownEditing",
 		"Sass",
 		"Vintage",
-		"zzz A File Icon zzz"
 	],
 	"ignored_words":
 	[
 		"Dropbox",
 		"Mamp"
 	],
-	"theme": "Adaptive.sublime-theme"
+	"theme": "Adaptive.sublime-theme",
+	"color_scheme": "auto",
+	"dark_color_scheme": "Breakers.sublime-color-scheme",
+	"light_color_scheme": "Packages/DA UI/DA Dark.tmTheme",
 }
