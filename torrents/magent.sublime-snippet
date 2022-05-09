@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-# Replace highlighted info_hash and copy Magnet URL
-magnet:?xt=urn:btih:${1:5D59F1***************************AD8CC45}
+${2:magnet:?xt=urn:btih:${1:5D59F1***************************AD8CC45}}
 ]]></content>
 	<tabTrigger>magnet</tabTrigger>
-	<description>Create magnet link from info_hash</description>
+	<description>Create magnet link from info_hash (use tab)</description>
+	<comment># Replace highlighted info_hash and copy Magnet URL</comment>
 </snippet>

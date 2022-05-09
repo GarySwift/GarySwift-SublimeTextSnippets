@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * ${2:Block Template}
+ *
+ * @param   array        \$block         The block settings and attributes.
+ * @param   string       \$content       The block inner HTML (empty).
+ * @param   bool         \$is_preview    True during AJAX preview.
+ * @param   (int|string) \$post_id       The post ID this block is saved to.
+ */
+
+${3:# Overwrite the default InnerBlocks. Delete if not supported.
+\$allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/list', 'core/html', 'core/quote' );}
+# HTML wrapper for custom ACF block - includes ob output buffering
+\$block_render = new acf_block_render(\$class_name = "${1:block-template}", \$block, \$is_preview${4:, \$allowed_blocks}${5:, \$row = true});
+\$block_render->open();
+\$block_render->AOS->open();
+# put stuff here
+\$block_render->inner_blocks();
+\$block_render->AOS->close();
+\$block_render->close();
+]]></content>
+	<tabTrigger>block-template</tabTrigger>
+	<description>ACF Gutenberg Block Template</description>
+	<scope>source.php</scope>
+</snippet>

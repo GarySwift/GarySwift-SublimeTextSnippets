@@ -2,17 +2,11 @@
 	<content>
 <![CDATA[
 \$${1:field_name} = get_field('${1:field_name}');
-# Debug
-if( \$${1:field_name} ) {
-    if (is_string(\$${1:field_name})) {
-    	echo '\$${1:field_name}: ' . \$${1:field_name};
-    	write_log('\$${1:field_name}: '.\$${1:field_name});
-    }
-    else {
-    	echo '<pre>\$${1:field_name}: '; var_dump(\$${1:field_name}); echo '</pre>';
-    	write_log('\$${1:field_name}: ');write_log(\$${1:field_name});
-    }
-}]]>
+${2:if (is_string(\$${1:field_name}))
+	echo '\$${1:field_name}: ' . \$${1:field_name};
+else
+	echo '<pre>\$${1:field_name}: '; var_dump(\$${1:field_name}); echo '</pre>';}
+]]>
 	</content>
 	<tabTrigger>field</tabTrigger>
 	<description>Display ACF field</description>

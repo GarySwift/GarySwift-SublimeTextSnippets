@@ -27,6 +27,7 @@
 		"jQuery",
 		"JsFormat",
 		"JSONLint",
+		"JSX",
 		"Laravel Blade Highlighter",
 		"MarkdownEditing",
 		"MarkdownPreview",
@@ -46,12 +47,13 @@
 		"SublimeLinter-csslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-php",
+		"Syntax Highlighting for Sass",
 		"Terminal",
 		"Theme - Monokai Pro",
 		"Toggle the View Read-Only",
 		"TypeScript Syntax",
 		"Vue Syntax Highlight",
 		"Vuejs Snippets",
-		"WordPress Completions",
+		"WordPress Completions"
 	],
 }
