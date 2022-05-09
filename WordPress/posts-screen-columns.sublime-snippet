@@ -24,7 +24,7 @@ function populate_${1:post_type}_columns(\$column,\$post_id){
 }
 add_action('manage_${1:post_type}_posts_custom_column','populate_${1:post_type}_columns',10,2);
 ]]></content>
-    <tabTrigger>posts_screen_columns</tabTrigger>
+    <tabTrigger>columns</tabTrigger>
     <description>CPT Post Screen Columns</description>
     <scope>source.php</scope>
 </snippet>

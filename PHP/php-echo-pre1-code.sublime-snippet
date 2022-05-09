@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-echo "<pre>"; var_dump(\$${1:array}); echo "</pre>";
+echo "<pre class='callout ${2:secondary}'>"; var_dump(\$${1:array}); echo "</pre>";
 ]]></content>
     <tabTrigger>pre1</tabTrigger>
     <description>echo pre + var_dump()</description>

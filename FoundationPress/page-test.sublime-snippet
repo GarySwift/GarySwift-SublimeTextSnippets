@@ -1,9 +1,10 @@
 <snippet>
 	<content><![CDATA[
 /*
-Template Name: Test
+Template Name: ${1:Test}
 */
-get_header(); ?>
+get_header(); 
+get_template_part( 'template-parts/featured-image' ); ?>
 <div class="main-container">
   <div class="main-grid">
     <main class="main-content-full-width">

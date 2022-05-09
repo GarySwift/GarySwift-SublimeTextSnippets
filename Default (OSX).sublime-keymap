@@ -13,5 +13,8 @@
 	{ "keys": ["ctrl+alt+command+/"],
 	  "command": "insert_snippet", 
 	  "args": { "name": "Packages/User/PHP/comment-multiline.sublime-snippet" } 
-	},  	 
+	},
+	{ "keys": ["ctrl+alt+j"],
+	  "command": "js_format"
+	}	  	 
 ]

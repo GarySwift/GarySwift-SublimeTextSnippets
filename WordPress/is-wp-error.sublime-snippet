@@ -1,0 +1,11 @@
+<snippet>
+<content><![CDATA[
+if ( is_wp_error( \$${1:result} ) )
+	echo '<div style="color: red" class="error">' . \$${1:result}->get_error_message() . '</div>';
+]]></content>
+	<!-- # https://developer.wordpress.org/reference/functions/is_wp_error/ -->
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>error</tabTrigger>
+	<description>is_wp_error() - WordPress</description>
+	<scope>source.php</scope>
+</snippet>

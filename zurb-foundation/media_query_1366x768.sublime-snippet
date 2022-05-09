@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+@media screen and (min-height: 769px) and #{breakpoint(${1:xlarge})} {
+	body {
+		background-color: lightseagreen !important;;
+	}
+}
+]]></content>
+	<tabTrigger>breakpoint_laptop</tabTrigger>
+	<description>Laptop breakpoint 1366×768</description>
+	<scope>source.scss, source.sass</scope>
+</snippet>

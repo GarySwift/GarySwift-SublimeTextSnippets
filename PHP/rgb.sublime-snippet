@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+# https://thisinterestsme.com/random-rgb-hex-color-php/
+function random_rgb(\$string = true) {
+	\$rgb = array();
+
+	//Create a loop.
+	foreach(array('r', 'g', 'b') as \$color){
+	    //Generate a random number between 0 and 255.
+	    \$rgb[\$color] = mt_rand(0, 255);
+	}
+	if (\$string) {
+		return implode(",", \$rgb);
+	}
+	return \$rgb;    	
+}
+# usage: echo random_rgb()  
+]]></content>
+    <tabTrigger>rgb</tabTrigger>
+    <description>Generate a random RGB color</description>
+    <scope>source.php</scope>
+</snippet>

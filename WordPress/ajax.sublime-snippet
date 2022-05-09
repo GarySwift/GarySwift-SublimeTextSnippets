@@ -70,7 +70,7 @@ $0@todo - add this JavaScript to an external file
 
 $0export default function() {
     if(typeof ${1:TestFeature}Ajax !== "undefined") {
-        if (TestFeatureAjax.debug) console.log("${1:TestFeature}Ajax is defined -> Attempting server contact.");
+        if (${1:TestFeature}Ajax.debug) console.log("${1:TestFeature}Ajax is defined -> Attempting server contact.");
         \$.post(${1:TestFeature}Ajax.ajaxurl, ${1:TestFeature}Ajax, function(response) {
             var serverResponse = JSON.parse(response);
             if (${1:TestFeature}Ajax.debug) {

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+defined('${1:CONSTANT}') or define('${1:CONSTANT}', '${2:SomeDefaultValue}');
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>define</tabTrigger>
+	<description>define('CONSTANT', 'SomeDefaultValue')</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+function format_price(\$price) {
+    if (\$price) {
+        \$price = preg_replace('/[^0-9-.]+/', '', \$price);
+        if (is_float((float) \$price)) {
+            return number_format(\$price, 2, '.', '');
+        }            
+    }
+}
+]]></content>
+    <tabTrigger>price</tabTrigger>
+    <description>price with number_format</description>
+    <scope>source.php</scope>
+</snippet>

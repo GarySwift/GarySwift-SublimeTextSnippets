@@ -2,6 +2,7 @@
 	<content><![CDATA[
 wp_reset_query();//optional
 \$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+\$row = \$posts_per_page * (\$paged  - 1);
 \$post_type = 'post';
 \$posts_per_page = 10;
 \$args = array( 
