@@ -20,7 +20,7 @@ ${3:# Overwrite the default InnerBlocks. Delete if not supported.
 \$block_render->AOS->close();
 \$block_render->close();
 ]]></content>
-	<tabTrigger>block-template</tabTrigger>
+	<tabTrigger>block_render</tabTrigger>
 	<description>ACF Gutenberg Block Template</description>
 	<scope>source.php</scope>
 </snippet>
