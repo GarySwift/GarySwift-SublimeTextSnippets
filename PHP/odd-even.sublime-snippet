@@ -1,9 +1,17 @@
 <snippet>
 	<content><![CDATA[
+# In a for loop
 for (\$i = 0; \$i < 10; \$i++) {
     # Determine odd/even using modulo operator in a ternary conditional operator
     \$class = \$i % 2 == 0 ? 'even':'odd';
     echo \$i.': '.\$class."<br>";
+}
+
+# Or in a while loop
+\$class = 'even';
+while ( true ) {
+	# Do stuff
+	\$class = \$class == 'even' ? 'odd' : 'even';# toggle value
 }
 ]]></content>
 	<tabTrigger>odd_evan</tabTrigger>

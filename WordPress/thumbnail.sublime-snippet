@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+if ( has_post_thumbnail( \$post->ID ) ) {
+
+    # Get the url for the full size featured image
+    \$size = 'full';// Size for the full size featured image
+    \$featured_img_url = get_the_post_thumbnail_url(\$post->ID, \$size);
+
+    # Link thumbnail to full size image for use with lightbox
+    echo '<a href="'.esc_url(\$featured_img_url).'" rel="lightbox">'; 
+        the_post_thumbnail('thumbnail');
+    echo '</a>';    
+}
+]]></content>
+    <tabTrigger>thumbnail</tabTrigger>
+    <description>Get featured image - WordPress</description>
+    <scope>source.php</scope>
+</snippet>

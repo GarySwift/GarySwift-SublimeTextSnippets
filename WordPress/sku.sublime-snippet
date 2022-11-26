@@ -1,12 +1,17 @@
 <snippet>
 	<content><![CDATA[
+# \$product_id = \$post->ID;
 \$product_sku     = get_post_meta(\$product_id, '_sku', true); // The product SKU
 \$product_price   = get_post_meta(\$product_id, '_price', true); // The product price
-\$image_url       = wp_get_attachment_image_src( get_post_meta(\$product_id, '_thumbnail_id', true) ); // The product image URL
-
+\$image = "//placehold.it/600x600";// The product image URL
+if ( \$thumbnail_id = get_post_meta(\$product_id, '_thumbnail_id', true)) {
+    if (\$image_array = wp_get_attachment_image_src( \$thumbnail_id, "shop_single" )) {
+        \$image = \$image_array[0];
+    }                      
+}
 ## ----- Custom meta data ----- ##
+\$custom_value    = get_post_meta(\$product_id, '_custom_key', true); // Custom meta 
 
-\$custom_value    = get_post_meta(\$product_id, '_custom_key', true); // Custom meta 	
 ]]></content>
 	<tabTrigger>sku</tabTrigger>
 	<description>Get WooCommerce product details (Sku)</description>

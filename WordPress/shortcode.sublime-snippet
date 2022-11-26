@@ -1,18 +1,18 @@
 <snippet>
 	<content><![CDATA[
-// [bartag foo="foo-value"]
-function bartag_func( \$atts ) {
+// [${1:bartag} ${2:foo}="${2:foo}-value"]
+function ${1:bartag}_func( \$atts ) {
     \$a = shortcode_atts( array(
-        'foo' => 'something',
-        'bar' => 'something else',
+        '${2:foo}' => 'something',
+        '${3:bar}' => 'something else',
     ), \$atts );
 
-	\$foo = \$a['foo'];
-	\$bar = \$a['bar'];
+	\$${2:foo} = \$a['${2:foo}'];
+	\$${3:bar} = \$a['${3:bar}'];
 
-    return "foo = {\$a['foo']}";
+    return "${2:foo} = {\$a['${2:foo}']}";
 }
-add_shortcode( 'bartag', 'bartag_func' );
+add_shortcode( '${1:bartag}', '${1:bartag}_func' );
 ]]></content>
 	<tabTrigger>shortcode</tabTrigger>
 	<description>WordPress shortcode</description>

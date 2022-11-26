@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+if ( is_user_logged_in() ) {
+    echo 'Welcome, registered user!';
+} else {
+    echo 'Welcome, visitor!';
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>logged</tabTrigger>
+	<description>WordPress: Determine whether the current visitor is a logged in</description>
+	<scope>source.php</scope>
+</snippet>

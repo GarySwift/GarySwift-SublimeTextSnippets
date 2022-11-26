@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+# Retrieve a list of all saved menus
+\$menu_list        = get_terms('nav_menu');
+# Retrieve a list of menu locations
+\$menu_locations   = get_nav_menu_locations();
+# See also
+# \$menu_locations = get_registered_nav_menus();
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>menu</tabTrigger>
+	<description>Get menus and menu locations - WordPress</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

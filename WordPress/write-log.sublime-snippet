@@ -10,7 +10,7 @@ if ( ! function_exists('write_log')) {
    }
 }
 ]]></content>
-	<tabTrigger>write_log</tabTrigger>
-	<description>write_log()</description>
+	<tabTrigger>function_write_log</tabTrigger>
+	<description>Create write_log() function</description>
 	<scope>source.php</scope>
 </snippet>

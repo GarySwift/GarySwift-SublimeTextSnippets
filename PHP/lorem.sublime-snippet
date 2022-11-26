@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Lorem Ipsum generator
+ *
+ * Loripsum.net has an API to generate placeholder text.
+ * 
+ * @link             https://loripsum.net/
+ */
+\$count      = '${1:1}';
+\$short      = '${2:/short}';
+\$plaintext  = '${3:/plaintext}';
+\$api_url    = 'http://loripsum.net/api'.\$count.\$short.\$plaintext;
+\$loripsum    = file_get_contents(\$api_url);
+]]></content>
+    <tabTrigger>lorem</tabTrigger>
+    <description>Lorem Ipsum generator (API)</description>
+    <scope>source.php</scope>
+</snippet>

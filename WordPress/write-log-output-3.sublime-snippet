@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-write_log('\$${1:this}: '.\$${1:this});
+write_log('\$${1:this}: ');write_log(\$${1:this});
 ]]></content>
 	<tabTrigger>wl3</tabTrigger>
-	<description>write_log('$var:'.$var)</description>
+	<description>write_log('$var') + write_log($var)</description>
 	<scope>source.php</scope>
 </snippet>
