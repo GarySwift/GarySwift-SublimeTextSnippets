@@ -26,7 +26,6 @@
 		"JSONLint",
 		"JSX",
 		"Laravel Blade Highlighter",
-		"MarkdownEditing",
 		"MarkdownPreview",
 		"Maybs Quit",
 		"Monokai Extended",
@@ -47,6 +46,6 @@
 		"TypeScript Syntax",
 		"Vue Syntax Highlight",
 		"Vuejs Snippets",
-		"WordPress Completions"
+		"WordPress Completions",
 	],
 }
