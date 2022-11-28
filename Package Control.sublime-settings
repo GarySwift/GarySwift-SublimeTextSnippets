@@ -15,6 +15,7 @@
 		"CSS3",
 		"DA UI",
 		"DocBlockr",
+		"Dockerfile Syntax Highlighting",
 		"Emmet",
 		"Emmet Css Snippets",
 		"Find++",
@@ -30,10 +31,12 @@
 		"JSX",
 		"Laravel Blade Highlighter",
 		"MarkdownEditing",
+		"MarkdownLight",
 		"MarkdownPreview",
 		"Maybs Quit",
 		"Monokai Extended",
 		"Package Control",
+		"PHP Snippets",
 		"PHPSnippets",
 		"Pretty JSON",
 		"Random Everything",
@@ -54,6 +57,6 @@
 		"TypeScript Syntax",
 		"Vue Syntax Highlight",
 		"Vuejs Snippets",
-		"WordPress Completions"
+		"WordPress Completions",
 	],
 }

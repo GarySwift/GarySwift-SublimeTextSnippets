@@ -18,8 +18,34 @@ function wp_swift_cpt_register_${1:custom_post}() {
 	 */
 
 	\$labels = array(
-		"name" => __( "${2:Custom Posts}", "" ),
-		"singular_name" => __( "${3:Custom Post}", "" ),
+		"name" 					=> __( "${2:Custom Posts}", "" ),
+		"singular_name" 		=> __( "${3:Custom Post}", "" ),
+		// Optional labels
+		"menu_name"             => __( "${2:Custom Posts}", "text_domain" ),
+		"name_admin_bar"        => __( "${3:Custom Post}", "text_domain" ),
+		"archives"              => __( "${3:Custom Post} Archives", "text_domain" ),
+		"attributes"            => __( "${3:Custom Post} Attributes", "text_domain" ),
+		"parent_item_colon"     => __( "Parent ${3:Custom Post}:", "text_domain" ),
+		"all_items"             => __( "All ${2:Custom Posts}", "text_domain" ),
+		"add_new_item"          => __( "Add New ${3:Custom Post}", "text_domain" ),
+		"add_new"               => __( "Add New", "text_domain" ),
+		"new_item"              => __( "New ${3:Custom Post}", "text_domain" ),
+		"edit_item"             => __( "Edit ${3:Custom Post}", "text_domain" ),
+		"update_item"           => __( "Update ${3:Custom Post}", "text_domain" ),
+		"view_item"             => __( "View ${3:Custom Post}", "text_domain" ),
+		"view_items"            => __( "View ${2:Custom Posts}", "text_domain" ),
+		"search_items"          => __( "Search ${3:Custom Post}", "text_domain" ),
+		"not_found"             => __( "Not found", "text_domain" ),
+		"not_found_in_trash"    => __( "Not found in Trash", "text_domain" ),
+		"featured_image"        => __( "Featured Image", "text_domain" ),
+		"set_featured_image"    => __( "Set featured image", "text_domain" ),
+		"remove_featured_image" => __( "Remove featured image", "text_domain" ),
+		"use_featured_image"    => __( "Use as featured image", "text_domain" ),
+		"insert_into_item"      => __( "Insert into item", "text_domain" ),
+		"uploaded_to_this_item" => __( "Uploaded to this item", "text_domain" ),
+		"items_list"            => __( "${2:Custom Posts} list", "text_domain" ),
+		"items_list_navigation" => __( "${2:Custom Posts} list navigation", "text_domain" ),
+		"filter_items_list"     => __( "Filter items list", "text_domain" ),		
 	);
 	
 	\$public = true;
@@ -33,8 +59,8 @@ function wp_swift_cpt_register_${1:custom_post}() {
 		"show_ui" => true,
 		"show_in_rest" => false,
 		"rest_base" => "",
-		"has_archive" => false,// Whether the post type has an index/archive/root page
-		"show_in_menu" => \$public,
+		"has_archive" => \$public,// Whether the post type has an index/archive/root page
+		"show_in_menu" => true,
 		"show_in_nav_menus" => \$public,
 		"exclude_from_search" => !\$public,
 		"capability_type" => "post",
