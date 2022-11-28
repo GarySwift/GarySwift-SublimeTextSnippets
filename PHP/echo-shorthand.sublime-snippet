@@ -1,0 +1,8 @@
+<snippet>
+    <content>
+<![CDATA[<?= ${2:\$${1:var}} ?>]]>
+    </content>
+    <tabTrigger>?</tabTrigger>
+    <description>PHP echo shorthand</description>
+    <scope>text.html - source.php</scope>
+</snippet>
