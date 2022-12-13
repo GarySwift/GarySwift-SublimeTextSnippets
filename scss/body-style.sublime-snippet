@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 body {
-	background-color: ${1:lightgrey}${2:lightyellow}${3:lightcoral} ${4:!important};
+	background-color: ${1:lightyellow} ${2:!important};//${3:lightgrey}${4:lightcoral} 
 	${5:border: 3px dashed lightgreen;}
 }
 ]]></content>
