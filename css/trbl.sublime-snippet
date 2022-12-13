@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-/*
+/* 		top-left | top-right | bottom-right | bottom-left
 margin: (top right bottom left);// 1 value - all
 margin: (top bottom) (right left);// 2 values
 margin: (top) (right left) (bottom);// 3 values

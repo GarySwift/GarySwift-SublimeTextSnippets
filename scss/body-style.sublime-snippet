@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
-body {
-	background-color: ${1:lightyellow} ${2:!important};//${3:lightgrey}${4:lightcoral} 
-	${5:border: 3px dashed lightgreen;}
+${1:body} {
+	background-color: ${2:lightyellow} !important;//${4:lightgrey}
+	${6:border: 3px dashed ${3:lightcoral};//${5:lightgreen}}
 }
-]]></content>
+]]></content>${2:lightgreen}
 	<tabTrigger>body</tabTrigger>
 	<description>body background-color</description>
 	<scope>source.scss, source.sass</scope>
