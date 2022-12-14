@@ -1,9 +1,0 @@
-<snippet>
-	<content><![CDATA[
-// top-left | top-right | bottom-right | bottom-left
-border-radius: 1px 0 3px 4px;
-]]></content>
-	<tabTrigger>trbl</tabTrigger>
-	<description>CSS shorthand notes</description>
-	<scope>source.scss, source.sass</scope>
-</snippet>
