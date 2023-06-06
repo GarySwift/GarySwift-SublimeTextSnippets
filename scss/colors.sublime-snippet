@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+/* 
+	AliceBlue
+	Azure
+	BlanchedAlmond
+	Chartreuse
+	Lavender
+	LightCyan
+	LightYellow
+	MistyRose
+	PowderBlue
+	Plum
+ */		
+]]></content>
+	<tabTrigger>colors</tabTrigger>
+	<description>HTML Web Safe Color Names</description>
+	<scope>source.scss, source.sass</scope>
+</snippet>

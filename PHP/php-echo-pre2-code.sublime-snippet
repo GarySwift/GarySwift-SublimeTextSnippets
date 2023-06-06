@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-echo '<pre class="callout ${2:warning}">\$${1:array}: '; var_dump(\$${1:array}); echo '</pre>';
+echo '<pre>'; var_dump(\$${1:var}); echo '</pre>';
 ]]></content>
     <tabTrigger>pre2</tabTrigger>
-    <description>echo pre + name + var_dump()</description>
+    <description>echo pre + var_dump()</description>
     <scope>source.php</scope>
 </snippet>

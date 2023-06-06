@@ -1,10 +1,24 @@
 <snippet>
 	<content><![CDATA[
+/* 
+	${4:AliceBlue} 		  
+	${5:Azure}           
+	BlanchedAlmond
+	Chartreuse	    
+	CadetBlue 		  
+	Lavender	
+	LightCyan		   
+	LightYellow		 
+	MistyRose	
+	PowderBlue		  
+	Plum   			   
+	HoneyDew
+ */
 ${1:body} {
-	background-color: ${2:lightyellow} !important;//${4:lightgrey}
-	${6:border: 3px dashed ${3:lightcoral};//${5:lightgreen}}
+	background-color: ${2:lightyellow} !important;
+	${6:border: 3px dashed ${3:lightcoral};}
 }
-]]></content>${2:lightgreen}
+]]></content>
 	<tabTrigger>body</tabTrigger>
 	<description>body background-color</description>
 	<scope>source.scss, source.sass</scope>

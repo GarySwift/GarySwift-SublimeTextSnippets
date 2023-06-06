@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+@include breakpoint(${1:large}) {
+    ${2}
+}
+]]></content>
+	<tabTrigger>include</tabTrigger>
+	<description>include scss breakpoint (Zurb)</description>
+	<scope>source.scss, source.sass</scope>
+</snippet>

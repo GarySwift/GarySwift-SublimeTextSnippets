@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+\$${1:this->}admin_url = get_admin_url();
+]]></content>
+    <tabTrigger>admin_url</tabTrigger>
+    <description>Wordpress Admin URL</description>
+    <scope>source.php</scope>
+</snippet>

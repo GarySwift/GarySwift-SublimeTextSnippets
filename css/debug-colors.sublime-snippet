@@ -1,0 +1,53 @@
+<snippet>
+	<content><![CDATA[
+// https://stripesgenerator.com/
+background-image: linear-gradient(135deg, #f0eee2 25%, #f7f3de 25%, #f7f3de 50%, #f0eee2 50%, #f0eee2 75%, #f7f3de 75%, #f7f3de 100%);
+background-size: 56.57px 56.57px;
+h1{
+	background-color: AliceBlue !important;
+    border: 1px dashed Plum;
+}
+.entry-content {
+	background-color: Ivory !important;
+	background-image: linear-gradient(45deg, #f0eee2 25%, #f7f3de 25%, #f7f3de 50%, #f0eee2 50%, #f0eee2 75%, #f7f3de 75%, #f7f3de 100%);
+	background-size: 56.57px 56.57px;
+	h2{
+		background-color: HoneyDew !important;
+	    border: 1px dashed CadetBlue;
+	} 
+	h3{
+		background-color: Lavender !important;
+	    border: 1px dashed LightCyan;
+	} 
+	h4{
+		background-color: Azure !important;
+	    border: 1px dashed Plum;
+	} 
+	h5{
+		background-color: LightCyan !important;
+	    border: 1px dashed Chartreuse;
+	} 
+	h6{
+		background-color: HoneyDew !important;
+	    border: 1px dashed Plum;
+	} 
+	p{
+		background-color: BlanchedAlmond !important;
+	    border: 1px dashed Chartreuse;
+	} 
+	ul {
+		background-color: MistyRose !important;
+	    border: 1px dashed HoneyDew;
+	} 
+	a{
+		background-color: Cyan !important;
+	} 
+	span {
+		background-color: LightYellow !important;
+	}
+}
+]]></content>
+	<tabTrigger>debug</tabTrigger>
+	<description>Quickly add debug colors to elements</description>
+	<scope>source.css, source.scss, source.sass</scope>
+</snippet>

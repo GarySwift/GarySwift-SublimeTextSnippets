@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * @link https://developer.mozilla.org/en-US/docs/Web/CSS/:not
+ */
+p:not(.irrelevant) {
+    font-weight: bold;
+}
+]]></content>
+	<tabTrigger>not</tabTrigger>
+	<description>:not() pseudo-class represents elements that do not match</description>
+	<scope>source.css, source.scss, source.sass</scope>
+</snippet>
