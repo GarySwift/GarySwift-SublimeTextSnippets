@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+var ${1:object} = {
+    ${2:name}: null,
+    active: true,
+    init: function() {
+    	if (!this.active) return;// Exit if false
+    	// Run once
+    	${3}
+    },
+    get: function() {
+    	return this.${2:name}
+    },
+    set: function(${2:name}) {
+    	this.${2:name} = ${2:name};
+    }
+}
+export { ${1:object} }
+// Usage (Add to top of other files):
+// import { ${1:object} }  from './${1:object}';
+]]></content>
+	<tabTrigger>exportObject</tabTrigger>
+	<description>export { object } from file</description>
+	<scope>source.js</scope>
+</snippet>

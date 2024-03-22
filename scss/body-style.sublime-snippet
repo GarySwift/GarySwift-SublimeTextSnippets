@@ -1,22 +1,13 @@
 <snippet>
 	<content><![CDATA[
-/* 
-	${4:AliceBlue} 		  
-	${5:Azure}           
-	BlanchedAlmond
-	Chartreuse	    
-	CadetBlue 		  
-	Lavender	
-	LightCyan		   
-	LightYellow		 
-	MistyRose	
-	PowderBlue		  
-	Plum   			   
-	HoneyDew
- */
+/*
+AliceBlue Azure BlanchedAlmond Chartreuse CadetBlue
+Lavender LightCoral LightCyan LightYellow
+MistyRose PowderBlue Plum HoneyDew
+*/
 ${1:body} {
-	background-color: ${2:lightyellow} !important;
-	${6:border: 3px dashed ${3:lightcoral};}
+	background-color: rgba(${2:LightYellow}, 0.5) !important;
+	${6:border: 2px dashed ${3:LightCoral};}
 }
 ]]></content>
 	<tabTrigger>body</tabTrigger>

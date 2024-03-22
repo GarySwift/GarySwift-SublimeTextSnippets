@@ -1,0 +1,84 @@
+<snippet>
+	<content><![CDATA[
+var log = {
+	showLogs: true,
+    debugColors:   ['color: red;   background: yellow', 'color: green', 'color: blue'],
+    infoColors:    ['color: white; background: purple', 'color: green', 'color: blue'],
+    actionColors:  ['color: white; background: blue', 'color: orange', 'color: blue'],
+    successColors: ['color: white; background: green', 'color: blue', 'color: green'],
+    alertColors:   ['color: white; background: red', 'color: green', 'color: red'],
+    warningColors: ['color: black; background: #ffae00', 'color: #ffae00', 'color: black'],
+    log: function( LABEL, colors, key, value ) {
+    	if(!this.showLogs) return;
+        if (key && value) {
+            console.log(
+              '%c %s %c %s: %c%s',
+              colors[0],LABEL, colors[1], key, colors[2], value
+            );
+        }
+        else {
+            let output;
+            if (key) output = key; else if (value) output = value;
+            if(output)
+            console.log(
+              '%c %s %c %s',
+              colors[0], LABEL, colors[2], output
+            );
+        }
+    },
+    debug: function(key, value) {
+        this.log('DEBUG', this.debugColors, key, value);
+    },
+    info: function(key, value) {
+        this.log('INFO', this.infoColors, key, value);
+    },
+    action: function(key, value) {
+        this.log('ACTION', this.actionColors, key, value);
+    },
+    success: function(key, value) {
+        this.log('SUCCESS', this.successColors, key, value);
+    },
+    alert: function(key, value) {
+        this.log('ALERT', this.alertColors, key, value);
+    },   
+    warning: function(key, value) {
+        this.log('WARNING', this.warningColors, key, value);
+    },
+    off: function() {
+        this.showLogs = false;
+    },
+    on: function() {
+        this.showLogs = true;
+    },
+    toggle: function() {
+        this.showLogs = !this.showLogs;
+    }                                   	
+}
+export { log }
+// Usage: 
+
+// import exportFunction from './lib/export';
+// import { log } from './lib/log';
+
+// \$(document).ready(function() {
+//   exportFunction(log);
+// });
+
+// log.debug('Test Action', 3256);
+// log.info('Test Action', 3256);
+// log.action('Test Action', 3256);
+// log.success('Test Action', 3256);
+// log.alert('Test Action', 3256);
+// log.warning('Test Action', 3256);
+
+// log.debug('Test Action');
+// log.info('Test Action');
+// log.action('Test Action');
+// log.success('Test Action');
+// log.alert('Test Action');
+// log.warning('Test Action');
+]]></content>
+	<tabTrigger>log_function</tabTrigger>
+	<description>export log function()</description>
+	<scope>source.js</scope>
+</snippet>

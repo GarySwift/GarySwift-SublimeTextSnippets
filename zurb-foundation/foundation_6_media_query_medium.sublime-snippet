@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-@media screen and #{breakpoint(medium only)} {
+@media screen and #{breakpoint(medium${1: only})} {
 	
 }
 ]]></content>

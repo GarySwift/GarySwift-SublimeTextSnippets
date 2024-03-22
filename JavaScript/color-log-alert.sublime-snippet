@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+log.alert(${2:'${1:var}', ${1:var}});
+]]></content>
+	<tabTrigger>log.alert</tabTrigger>
+	<description>log.alert('var', var);</description>
+	<scope>source.js</scope>
+</snippet>

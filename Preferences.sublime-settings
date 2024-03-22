@@ -7,7 +7,7 @@
 		"shortcode"
 	],
 	"auto_complete_selector": "source, comment, text.plain, meta.tag, punctuation.definition.tag.begin, css, scss",
-	"font_size": 15,
+	"font_size": 17,
 	"ignored_packages":
 	[
 		"Sass",
@@ -25,4 +25,7 @@
 	"dark_color_scheme": "Breakers.sublime-color-scheme",
 	"light_color_scheme": "Packages/DA UI/DA Dark.tmTheme",
 	/*"update_check": false,*/
+	"index_files": true,
+	"folder_exclude_patterns": ["node_modules", "dist"],
+    "binary_file_patterns": ["*/node_modules/*", "*/dist/*"],
 }

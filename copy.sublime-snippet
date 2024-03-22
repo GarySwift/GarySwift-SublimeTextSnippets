@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<textarea onclick="this.focus();this.select();document.execCommand('copy')" onfocus="this.focus();this.select();document.execCommand('copy')">Text to copy</textarea>
+]]></content>
+	<tabTrigger>copy</tabTrigger>
+	<description>Textarea copy without an external JavaScript file</description>
+	<scope>text.html - source.php</scope>
+</snippet>

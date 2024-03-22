@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+// https://www.samanthaming.com/tidbits/40-colorful-console-message/
+const styles = ['color: red', 'background: yellow'].join(';');
+// %c applies CSS style rules to the output string as specified by the second parameter.
+const message = '${1:Some Important Message Here}';
+// Pass a message variable using %s specifier.
+console.log('%c%s', styles, message);
+]]></content>
+	<tabTrigger>log+</tabTrigger>
+	<description>console.log() with colors</description>
+	<scope>source.js</scope>
+</snippet>
