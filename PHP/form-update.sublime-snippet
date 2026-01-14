@@ -1,0 +1,33 @@
+<snippet>
+    <content><![CDATA[
+\$${1:update} = isset(\$_POST["${1:update}"]) ? true : false;
+\$do_${1:update} = \$${1:update} && isset(\$_POST["do_${1:update}"]) ? true : false;
+\$form_class = \$do_${1:update} ? 'alert' : 'warning';
+
+if (\$${1:update}) : ?>
+    <div class="callout <?= \$form_class ?>">
+        <h3>${1/(.+)/\u$1/g} Form Submitted<?= \$${1:update} ? '' : ' (Test Run)' ?></h3>
+        <p>The files shown below <?= \$${1:update} ? 'have been' : 'will be' ?> ${1:update}d.</p>
+    </div>
+<?php endif ?>
+
+<?php if (\$do_${1:update}): ?>
+    <div class="callout <?= \$form_class ?>">
+        <?php # Do the ${1:update} stuff... ?>
+    </div>
+<?php endif ?>
+
+<form method="POST" data-action="<?= plugin_dir_url( __FILE__ ) . 'download.php' ?>">
+    <input type="hidden" name="${1:update}" value="1">
+    <input type="checkbox" name="do_${1:update}" id="do-${1:update}" value="1">
+    <label for="do-${1:update}">Do ${1/(.+)/\u$1/g}</label><small>(This is a safety check!)</small><br>
+    <input type="submit" value="${1/(.+)/\u$1/g}" class="button large ${2:secondary}">
+</form>
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>form</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.php</scope>
+    <description>A simple form to use while debugging (Update form on same page)</description>
+</snippet>

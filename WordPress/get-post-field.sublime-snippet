@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Retrieves data from a post field based on Post ID.
+ *
+ * Examples of the post field will be (case sensitive):
+ * 
+ * ID, post_author, ${3:post_date}, post_date_gmt, post_content, post_title, ${4:post_excerpt}, post_status, 
+ * comment_status, ping_status, post_password, ${5:post_name}, to_ping, pinged, post_modified, 
+ * post_modified_gmt, post_content_filtered, post_parent, guid, menu_order, 
+ * post_type, post_mime_type, comment_count, filter
+ *
+ * @since 			1.0
+ * 
+ * @link https://developer.wordpress.org/reference/functions/get_post_field/
+ */
+\$${1:post_status} = get_post_field('${1:post_status}', \$${2:post_id});
+]]></content>
+    <tabTrigger>post_field</tabTrigger>
+    <description>Wordpress: get_post_field('post_status')</description>
+    <scope>source.php</scope>
+</snippet>

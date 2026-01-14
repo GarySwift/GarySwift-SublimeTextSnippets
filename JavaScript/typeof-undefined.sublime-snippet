@@ -5,8 +5,7 @@ if(typeof lastname !== "undefined") {
   // Variable is defined
 }
 ]]></content>
-	<tabTrigger>typeof</tabTrigger>
-	<tabTrigger>undefined</tabTrigger>
+	<tabTrigger>defined</tabTrigger>
 	<scope>source.js, source.jsx, source.ts</scope>
 	<description>Check if var is defined</description>
 </snippet>

@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Retrieves the post slug (post_name) based on Post ID.
+ * @link https://developer.wordpress.org/reference/functions/get_post_field/
+ */
+\$${1:post_name} = get_post_field('${1:post_name}', \$${2:post_id});
+]]></content>
+    <tabTrigger>slug</tabTrigger>
+    <description>Wordpress: get_post_field('post_name') [Slug]</description>
+    <scope>source.php</scope>
+</snippet>

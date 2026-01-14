@@ -71,6 +71,37 @@ else {
  * ToDo: Correctly determine if date string is a valid date in that format
  * @link https://stackoverflow.com/questions/19271381/correctly-determine-if-date-string-is-a-valid-date-in-that-format
  */ 
+
+/**
+ * The format of the outputted date string.
+ * See the formatting options below. (Not the complete list.)
+ *
+ * @link   https://www.php.net/manual/en/datetime.format.php
+ * 
+ * Year	---
+ * d	Day of the month, 2 digits with leading zeros
+ * D	A textual representation of a day, three letters
+ * j	Day of the month without leading zeros
+ * l   (lowercase 'L')	A full textual representation of the day of the week
+ * N	ISO 8601 numeric representation of the day of the week
+ * S	English ordinal suffix for the day of the month, 2 characters
+ * w	Numeric representation of the day of the week
+ * z	The day of the year (starting from 0)
+ * 
+ * 
+ * Month ---
+ * F	A full textual representation of a month, such as January or March
+ * m	Numeric representation of a month, with leading zeros
+ * M	A short textual representation of a month, three letters
+ * n	Numeric representation of a month, without leading zeros
+ * t	Number of days in the given month
+ * 
+ * Year	---
+ * L	Whether it's a leap year
+ * Y	A full numeric representation of a year, at least 4 digits, with - for years BCE.
+ * y	A two digit representation of a year
+ */
+
 ]]></content>
 	<tabTrigger>date_help</tabTrigger>
 	<description>PHP date help</description>

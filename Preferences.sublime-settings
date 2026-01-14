@@ -7,16 +7,26 @@
 		"shortcode"
 	],
 	"auto_complete_selector": "source, comment, text.plain, meta.tag, punctuation.definition.tag.begin, css, scss",
-	"font_size": 17,
+	"font_size": 18,
 	"ignored_packages":
 	[
-		"Sass",
+		"MarkdownEditing",
 		"Vintage",
 	],
 	"ignored_words":
 	[
+		"BrightLight",
+		"Brightlight",
 		"Dropbox",
-		"Mamp"
+        "Github",
+		"Mamp",
+		"Plytix",
+		"Taoglas",
+		"github",
+		"href",
+		"json",
+		"taoglas",
+		"wp",
 	],
 	"theme": "Adaptive.sublime-theme",
 	"update_check": false,
@@ -26,6 +36,6 @@
 	"light_color_scheme": "Packages/DA UI/DA Dark.tmTheme",
 	/*"update_check": false,*/
 	"index_files": true,
-	"folder_exclude_patterns": ["node_modules", "dist"],
-    "binary_file_patterns": ["*/node_modules/*", "*/dist/*"],
+	"folder_exclude_patterns": ["node_modules"],
+    "binary_file_patterns": ["*/node_modules/*"],
 }

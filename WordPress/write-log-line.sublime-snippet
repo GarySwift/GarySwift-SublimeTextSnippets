@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+write_log('Line: ' . __LINE__ .' -> '. __FILE__);
+]]></content>
+	<tabTrigger>wll</tabTrigger>
+	<description>write_log('Line');</description>
+	<scope>source.php</scope>
+</snippet>

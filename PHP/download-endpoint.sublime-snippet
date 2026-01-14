@@ -1,0 +1,38 @@
+<snippet>
+    <content><![CDATA[
+/**
+ * Download Endpoint
+ *
+ * This will download a generic multi-dimensional array
+ * into a CSV file in the users 'downloads' folder.
+ *
+ * @author Gary Swift <gary@brightlight.ie>
+ */
+
+\$filename = "export.csv";
+if (isset(\$_POST["rows"])) {
+
+    \$today_time = date("Y-m-d-H-i-s");
+    \$rows = \$_POST["rows"];
+    header( 'Content-Type: application/csv' );
+    header( 'Content-Disposition: attachment; filename="' . \$today_time.'_'.\$filename . '";' );
+
+    \$handle = fopen( 'php://output', 'w' );
+    foreach ( \$rows as \$row ) {
+        fputcsv(\$handle, \$row);
+    }
+    fclose( \$handle );
+
+    // use exit to get rid of unexpected output afterward
+    exit();
+        
+}
+die("Download data not found!");
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>download</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.php</scope>
+    <description>Download script for CSV file. (Assumes sent via POST submit.) </description>
+</snippet>

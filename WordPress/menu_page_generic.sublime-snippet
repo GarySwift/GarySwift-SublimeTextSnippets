@@ -1,0 +1,224 @@
+<snippet>
+	<content><![CDATA[
+
+class WpTaoglasGenericHelper {
+    public function __construct() {
+
+    }
+    public function callback() {
+        return 'In turpis. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Etiam vitae tortor. Aenean viverra rhoncus pede. Quisque ut nisi.';
+    }
+}
+
+class WpTaoglasGenericMenuPage {
+    private \$helper;
+    private \$options;
+    private \$admin_page_type;
+    private \$post_type;
+    private \$prefix;
+    private \$args;
+    private \$prefix_slug;
+    private \$parent_slug;
+
+    private \$page_title;
+    private \$menu_slug;
+    private \$group;
+    private \$option_prefix;
+    private \$option_name;
+    private \$option_group;
+    private \$page;
+    private \$section;
+
+    private \$term_id;
+    private \$name;
+    private \$slug;
+    private \$parent;
+
+    private \$fields;
+
+    public function __construct(\$admin_page_type, \$prefix, \$args, \$page_prefix = null, \$fields = null) {
+        \$this->helper = new WpTaoglasGenericHelper();
+        \$this->admin_page_type = \$admin_page_type;
+        \$this->prefix = \$prefix;// can be used as \$post_type
+        \$this->args = \$args;
+        \$this->name = \$this->args['name'];
+        \$this->slug = \$this->args['slug'];
+        \$this->page_prefix = \$page_prefix;
+        \$this->fields = \$fields;
+        add_action( 'admin_menu', array( \$this, 'add_plugin_page' ) );
+        if(\$this->fields) add_action( 'admin_init', array( \$this, 'page_init' ) );
+    }
+
+    public function add_plugin_page() {
+        \$this->prefix_slug = str_replace('_', '-', \$this->prefix);
+        \$this->parent_slug = "edit.php?post_type=".\$this->prefix; 
+
+        if (\$this->page_prefix)
+            \$this->page_title  = \$this->page_prefix.': '.\$this->name;
+        else
+            \$this->page_title  = \$this->name;
+
+        \$this->menu_slug = \$this->prefix_slug.'-'.\$this->slug;
+        \$this->group = str_replace('-', '_', \$this->slug);
+        \$this->option_prefix = \$this->prefix.'_'.\$this->group;
+        \$this->option_name = \$this->option_prefix.'_option_name';
+        \$this->option_group = \$this->option_prefix.'_option_group';
+        \$this->page = \$this->menu_slug;
+        \$this->section = \$this->prefix.'_settings_setting_section';
+
+        if (\$this->admin_page_type === 'submenu_page') {
+            \$this->post_type = \$this->prefix;
+            add_submenu_page(
+                \$this->parent_slug,
+                \$this->page_title, // page_title
+                \$this->name, // menu_title
+                'manage_options', // capability
+                \$this->menu_slug, // menu_slug
+                array( \$this, 'create_admin_page' ) // function
+            );
+        } 
+        elseif (\$this->admin_page_type === 'menu_page') {
+            add_menu_page(
+                \$this->page_title, // page_title
+                \$this->name, // menu_title
+                'manage_options', // capability
+                \$this->menu_slug, // menu_slug
+                array( \$this, 'create_admin_page' ), // function
+                'dashicons-admin-generic', // icon_url
+                2 // position
+            );
+        }
+    }
+
+    public function create_admin_page() {
+        \$this->options = get_option( \$this->option_name ); 
+        ?>
+
+        <div class="wrap">
+            <h2><?= \$this->page_title ?></h2>
+
+            <p>Nulla consequat massa quis enim. Vivamus in erat ut urna cursus vestibulum. Aenean ut eros et nisl sagittis vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Ut leo.</p>
+
+            <?php settings_errors(); ?>
+
+            <form method="post" action="options.php">
+                <?php
+                    settings_fields( \$this->option_group );
+                    do_settings_sections( \$this->page );
+                    submit_button();
+                ?>
+            </form>
+        </div>
+    <?php }
+
+    public function page_init() {
+        register_setting(
+            \$this->option_group, // option_group
+            \$this->option_name, // option_name
+            array( \$this, 'sanitize' ) // sanitize_callback
+        );
+
+        add_settings_section(
+            \$this->section, // id
+            'Settings', // title
+            array( \$this, 'section_info' ), // callback
+            \$this->page // page
+        );
+
+        foreach (\$this->fields as \$index => \$field) {
+            # The last parameter takes your arguments and passes them to the callback function.
+            \$args = array(
+                "index" => \$index,
+                "field" => \$field,
+            );
+            add_settings_field(
+                \$field->id, // id
+                \$field->title, // title
+                array( \$this, 'field_callback' ), // callback
+                \$this->page, // page
+                \$this->section, // section
+                \$args
+            );
+        }
+    }
+
+    public function sanitize(\$input) {
+        \$sanitary_values = array();
+        foreach (\$this->fields as \$field) {
+            if (\$field->type === 'text') {
+                if(isset(\$input[\$field->id])) \$sanitary_values[\$field->id] = sanitize_text_field( \$input[\$field->id] );
+            } 
+            elseif (\$field->type === 'checkbox') {
+                if(isset(\$input[\$field->id])) \$sanitary_values[\$field->id] = \$input[\$field->id];
+            }
+        }
+        return \$sanitary_values;
+    }
+
+    public function section_info() {
+
+    }
+
+    public function field_callback(\$args) {
+        \$field = \$args['field'];
+        if (\$field->type === 'text') {
+            if (isset(\$field->callback) ) {
+                // Use {} curly bracket for function Interpolation
+                \$txt = \$this->helper->{\$field->callback}();  
+                echo "<h1 class=\"h1\">\$txt</h1>";
+            }
+            else {
+                printf(
+                    '<input class="regular-text" type="text" name="%s" id="%s" value="%s">',
+                    "\$this->option_name[\$field->id]",
+                    \$field->id, 
+                    isset( \$this->options[\$field->id] ) ? esc_attr( \$this->options[\$field->id]) : ''
+                );
+            }           
+        } 
+        elseif (\$field->type === 'checkbox') {
+            \$checked = ( isset( \$this->options[\$field->id] ) && \$this->options[\$field->id] === \$field->id ) ? 'checked' : '';
+            printf(
+                '<input type="checkbox" name="%s" id="%s" value="%s" %s> <label for="%s">%s</label>',
+                "\$this->option_name[\$field->id]",// name
+                \$field->id,// id
+                \$field->id,// value
+                \$field->id,// for
+                \$checked,
+                \$field->label,// label
+            );          
+        }
+    }
+}//@nd class
+/* 
+ * Retrieve this value with:
+ * generic_page_admin_options = get_option( 'parametric_data_generic_page_option_name' ); // Array of All Options
+ * \$generic_input = generic_page_admin_options['generic_input']; // Parametric Data
+ */
+if ( is_admin() ) {
+    \$generic_page_admin_page_fields = array(
+        (object) array(
+            "id" => "generic_callback",
+            "title" => "Generic Callback",
+            "type" => "text",
+            "callback" => "callback",
+        ),
+        (object) array(
+            "id" => "generic_input",
+            "title" => "Generic Text Input",
+            "type" => "text",
+        ),
+    );
+    \$args = array (
+        'name' => 'Generic Page',
+        'slug' => 'generic-page',
+    );
+    // new WpTaoglasGenericMenuPage('submenu_page', 'parametric_data', \$args, 'Generic Page', \$generic_page_admin_page_fields);
+    new WpTaoglasGenericMenuPage('menu_page', 'parametric_data', \$args, 'Parametric Data', \$generic_page_admin_page_fields);
+}
+
+]]></content>
+    <tabTrigger>menu_page_generic</tabTrigger>
+    <description>Wordpress Admin Menu Page</description>
+    <scope>source.php</scope>
+</snippet>

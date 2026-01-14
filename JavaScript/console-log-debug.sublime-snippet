@@ -14,16 +14,11 @@ console.log(
   'color: blue', 
   'This is the key'
 );
-// https://stackoverflow.com/questions/7912576/console-log-showing-contents-of-array-object
-let debugColors = ['color: red', 'color: green', 'color: blue'];
 console.log(
-  '%cDEBUG %c%s: %c%s',
-  debugColors[0], 
-  debugColors[1], 
-  'This is the key', 
-  debugColors[2],
-  'And here is the value', 
+  '%c DEBUG %c %s','color: red; background: yellow', 'color: green', 
+  'line ***: Something detected!', 
 );
+console.log('%c EXIT ','color: white; background: red');
 ]]></content>
 	<tabTrigger>log_debug</tabTrigger>
 	<description>console.log() DEBUG with colors</description>

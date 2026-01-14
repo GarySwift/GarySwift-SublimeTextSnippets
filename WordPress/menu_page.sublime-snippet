@@ -1,0 +1,140 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * ${2:Describe the page here}
+ */
+class ${1:CustomAdmin} {
+    private \$settings;
+    private \$options;
+    private \$inputs = array();
+
+    public function __construct(\$settings = array()) {
+        \$this->settings = (object) \$settings;
+        add_action( 'admin_menu', array( \$this, 'add_plugin_page' ) );
+        add_action( 'admin_init', array( \$this, 'page_init' ) );
+    }
+
+    public function add_plugin_page() {
+        \$this->settings->admin_url = get_admin_url();
+        \$this->settings->page_url =  \$this->settings->admin_url.'admin.php?page='.\$this->settings->menu_slug;
+        add_menu_page(
+            \$this->settings->page_title,
+            \$this->settings->menu_title,
+            'manage_options', // capability
+            \$this->settings->menu_slug,
+            array( \$this, 'create_admin_page' ), // callback function
+            'dashicons-admin-generic', // icon_url
+            2 // position
+        );
+    }
+
+    public function create_admin_page() {
+
+        if(isset(\$this->settings->option_name)) 
+            \$this->options = get_option( \$this->settings->option_name ); 
+        ?>
+
+        <div class="wrap">
+            <h2><?= \$this->settings->page_title ?></h2>
+            <p>Text at the top of the options page.</p>
+            <?php settings_errors(); ?>
+
+            <?php if(isset(\$this->settings->option_name)): ?>
+            <form method="post" action="options.php">
+                <?php
+                    settings_fields( \$this->settings->option_group );
+                    do_settings_sections( \$this->settings->page );
+                    submit_button();
+                ?>
+            </form>
+            <?php endif ?>
+        </div>
+    <?php }
+
+    public function page_init() {
+        if(!\$this->settings) return;
+
+        register_setting(
+            \$this->settings->option_group, // option_group
+            \$this->settings->option_name, // option_name
+            array( \$this, 'sanitize' ) // sanitize_callback
+        );
+
+        add_settings_section(
+            \$this->settings->section, // id
+            'Settings', // title
+            array( \$this, 'section_info' ), // callback
+            \$this->settings->page // page
+        );
+
+        \$this->inputs = array(
+            array(
+                'saved_text_0', // id
+                'Saved Text', // title
+                'text',// type
+            )
+        );
+
+        if (count(\$this->inputs)) {     
+            foreach (\$this->inputs as \$input) {
+                add_settings_field(
+                    \$input[0], // id
+                    \$input[1], // title
+                    array( \$this, 'input_callback'), // callback
+                    \$this->settings->page, // page
+                    \$this->settings->section, // section
+                    \$input// args
+                );
+            }
+        }
+    }
+
+    public function sanitize(\$input) {
+        \$key = array_key_first(\$input);
+        \$sanitary_values = array();
+        if ( isset( \$input[\$key] ) ) {
+            \$sanitary_values[\$key] = sanitize_text_field( \$input[\$key] );
+        }
+
+        return \$sanitary_values;
+    }
+
+    public function section_info() {
+        
+    }
+
+    public function input_callback(\$input) {
+        switch (\$input[2]) {
+            case 'text':
+                \$this->text_callback(\$input);
+                break;
+        }
+    }
+
+    public function text_callback(\$input) {
+        printf(
+            '<input class="regular-text" type="text" name="%s[%s]" id="%s" value="%s">',
+            \$this->settings->option_name,
+            \$input[0],
+            \$input[0],
+            isset( \$this->options[\$input[0]] ) ? esc_attr( \$this->options[\$input[0]]) : ''
+        );
+    }
+
+}
+if ( is_admin() ) {
+    new ${1:CustomAdmin}(array(
+        'page_title' => '${1/([a-z])([A-Z])/$1 $2/g}',
+        'menu_title' => '${1/([a-z])([A-Z])/$1 $2/g}',
+        'menu_slug' => '${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}',
+        'option_group' => '${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_option_group',
+        'option_name' => '${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_option_name',
+        'section' => '${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2_\l$2:)/g}_setting_section',
+        'page' => '${1/^([A-Z])|(?:([A-Z]))/(?1\l$1:)(?2-\l$2:)/g}-page',
+    ));
+}
+]]></content>
+    <tabTrigger>menu_page</tabTrigger>
+    <description>Wordpress Admin Menu Page</description>
+    <scope>source.php</scope>
+</snippet>

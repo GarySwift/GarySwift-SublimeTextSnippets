@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-write_log(\$${1:this}, '\$${1:this}');
+write_log(${3:${1:\$${2:this}}}${4:, '${1:\$${2:this}}'});
 ]]></content>
 	<tabTrigger>wl4</tabTrigger>
 	<description>write_log($var, '$var');</description>
